@@ -1,0 +1,23 @@
+# Welcome to my Portfolio
+
+I have tried to include almost all the projects I have worked on whether as a part of my internship or independently.
+
+For project description and my contribution in each of them, please visit the porjects' folder seperately.
+
+## Project #1
+
+**Organization:** Global Engagement Office, City University of Hong Kong (July 2019 – Present)
+
+**Position:** *Developer / Junior Research Assistant*
+
+## *Project #2 - 
+
+**Organization:** Jardine Matheson (July 2018 – August 2019)
+
+**Position:** *Agile Intern Developer / Project Manager*
+
+
+
+**Please note that I don't have full ownership and copyrights for some projects which were part of my internship so they may not be included in this public repo. Please contact me personally for more details*
+
+### Thank You!
