@@ -1,4 +1,4 @@
-# GEO Stats Visualizer System
+# GEO Stats Visualizer
 
 **Project Description:** Frontend to visualize the international students' data
 
