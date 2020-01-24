@@ -1,10 +1,6 @@
-**Organization:** Global Engagement Office, City University (July 2019 – Present)
-
-**Position:** *Developer / Junior Research Assistant*
+# GEO Stats Visualizer System
 
 **Project Description:** Frontend to visualize the international students' data
-
----
 
 **Demos:**
 
