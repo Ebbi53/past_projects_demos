@@ -1,0 +1,462 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a:focus {
+    outline: none;
+}
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.logo a
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white !important;
+    
+}
+#cityu_logo , #geo_logo{
+    margin: auto 0;
+}
+#navbar_button {
+    text-align: right;
+    padding: 15px;
+}
+
+#navbar_button button {
+    background-color: white;
+    border: 1px solid rgb(206, 206, 206);
+}
+#cityu_logo img {
+    border-radius: 10px;
+}
+.logo a div.col-12:first-child {
+    font-size: 50px;
+}
+
+.logo a div.col-12:last-child {
+    font-size: 30px;
+}
+
+div#heading {
+    margin: 0;
+    padding: 35px;
+    background-image:url("../img/banner_background.jpg");
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center center;
+    
+}
+
+.dropdown-toggle {
+    white-space: normal;
+}
+
+.dropdown-item {
+    white-space: normal;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    display: block;
+    padding: 16px 0 16px 16px;
+    font-size: 14.5px;
+    line-height: 18px;
+    font-weight: bold;
+    color: #2E2E2E;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .nav-link-hover {
+    color: #BF165E !important;
+    border-left: 3px solid #BF165E;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.active-section {
+    color: #FFFFFF !important;
+    background-color: #BF165E !important;
+    border-radius: 4px;
+}
+
+.dropdown-item:hover, .dropdown-item:focus, .dropdown-li:hover, .dropdown-li:focus  {
+    background-color: white;
+    color: #BF165E;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    padding-left: 1.8rem;
+}
+
+.dropdown-menu {
+    border: 0;
+}
+.dropdown-menu ul li {
+    list-style-type: none;
+    position: relative;
+}
+.dropdown-menu ul li:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f054';
+    font-weight: 900;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    padding-left: 8px;
+}
+
+li.nav-item.dropdown div.no-padding, .dropdown-item {
+    transition: padding .25s;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+nav.navbar li.nav-item:not(:first-child) a.nav-link {
+    border-top: 1px solid #E2E2E2;
+}
+
+footer {
+    position: absolute;
+    font-size: 12px;
+    bottom: 0px;
+    width: 100%;
+    background-image: linear-gradient(rgb(253, 253, 243), rgb(254, 255, 197));
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #39C;
+}
+
+footer div.row {
+    margin: 0;;
+}
+
+h4#title, table#figures, div#captions {
+    margin: 45px 0 0;
+
+}
+
+#chart {
+    margin: 20px
+}
+
+h4#title, div#captions, div#captions p {
+    display: inline-block;
+}
+
+div#captions p {
+    margin: 0;
+}
+
+div#captions {
+    font-style: italic;
+    margin-bottom: 85px;
+}
+
+table#figures{
+    text-align: center;
+    border: 1px solid black;
+}
+
+table#figures tr, table#figures td, table#figures th {
+    border: 1px solid black;
+    padding: 5px;;
+}
+
+tr th {
+    color: white;
+    background-color: #1C6EA4;
+}
+
+.yellowbg {
+    background-color: #FFFFE6;
+}
+
+.no-bold {
+    font-weight: normal !important;
+}
+
+.row_hover {
+    background-color: rgba(0, 0, 0, 0.075) !important
+}
+
+.orangebg {
+    background-color: #FFE3C6;
+    font-weight: bold;
+}
+
+.greenbg {
+    background-color: #E6FFE6;
+    font-weight: bold;
+}
+
+.bluebg {
+    background-color: #E6F2FF;
+    font-weight: bold;
+}
+
+.graybg {
+    background-color: #EEEEEE;
+    font-weight: bold;
+}
+
+.purpleclr {
+    color: purple;
+    font-weight: bold;
+}
+
+.table-info, .table-secondary, .table-warning, .table-success, .boldtxt {
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 320px) {
+    .logo a div.col-12:first-child {
+        font-size: 25px;
+    }
+    
+    .logo a div.col-12:last-child {
+        font-size: 18px;
+    }
+    
+    h1,
+    h2 {
+        font-size: 25px;
+    }
+    h4,
+    h3 {
+        font-size: 18px;
+    }
+    h5 {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 321px) {
+    .logo a div.col-12:first-child {
+        font-size: 28px;
+    }
+    
+    .logo a div.col-12:last-child {
+        font-size: 20px;
+    }
+    .navbar-light .navbar-nav .nav-link, body {
+        font-size: 14px;
+    }
+
+    h1,
+    h2 {
+        font-size: 30px;
+    }
+    h4,
+    h3 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #footer_links {
+        margin: 10px auto;
+    }
+
+    #footer_note {
+        padding: 25px 15px 0;
+    }
+    table#figures {
+        margin: 35px 0;
+    }
+    div#captions {
+        margin-top: 0;
+    }
+    #cityu_logo {
+        margin: 10px 0;
+    }
+
+    #chart {
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (min-width: 577px) {
+    #footer_note {
+        padding: 30px 0 0 45px;
+    }
+    .logo a div.col-12:first-child {
+        font-size: 30px;
+    }
+    
+    .logo a div.col-12:last-child {
+        font-size: 21px;
+    }
+    div#captions {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #geo_logo {
+        margin-bottom: 20px;
+    }
+
+    #navdiv nav {
+        padding: 0;
+    }
+
+    #body {
+        text-align: center;
+    }
+
+    table#figures {
+        margin: 45px auto;
+    }
+
+}
+
+@media only screen and (min-width: 769px) {
+    #footer_links div[class*='col']:not(:first-child) {
+        padding: 0;
+    }
+    
+    #footer_links div[class*='col']:first-child {
+        padding-right: 0;
+    }
+
+    .logo a div.col-12:first-child {
+        font-size: 35px;
+    }
+    
+    .logo a div.col-12:last-child {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .navbar-expand-lg {
+        flex-flow: wrap;
+    }
+
+    #navbar_button {
+        display: none;
+    }
+
+    .logo a div.col-12:first-child {
+        font-size: 45px;
+    }
+    
+    .logo a div.col-12:last-child {
+        font-size: 27px;
+    }
+
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: static;
+    }
+
+    #navdiv {
+        margin-top: 23px;
+    }
+
+}
+
+.fadeIn {
+    -webkit-animation: fadein 0.6s;
+    /* Safari and Chrome */
+    -moz-animation: fadein 0.6s;
+    /* Firefox */
+    -ms-animation: fadein 0.6s;
+    /* Internet Explorer */
+    -o-animation: fadein 0.6s;
+    /* Opera */
+    animation: fadein 0.6s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Firefox */
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Safari and Chrome */
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Internet Explorer */
+
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Opera */
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}

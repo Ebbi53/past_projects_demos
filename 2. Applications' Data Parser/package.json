@@ -1,0 +1,28 @@
+{
+  "name": "internships_data_parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ebbi53/internships_data_parser.git"
+  },
+  "author": "Ibrahim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ebbi53/internships_data_parser/issues"
+  },
+  "homepage": "https://github.com/Ebbi53/internships_data_parser#readme",
+  "dependencies": {
+    "archiver": "^3.0.0",
+    "fs": "0.0.1-security",
+    "fs-extra": "^7.0.1",
+    "node-ssh": "^6.0.0",
+    "office-to-pdf": "^4.0.0",
+    "performance-now": "^2.1.0",
+    "readline": "^1.3.0"
+  }
+}
