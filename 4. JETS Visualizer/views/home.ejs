@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Home Page
+    </title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <script type="text/javascript">
+        /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+        (function(d, m){
+          var kommunicateSettings = {"appId":"2983a9493b9c93b13debc406a1e43141e","conversationTitle":"JETS Bot"};
+          var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+          s.src = "https://api.kommunicate.io/v2/kommunicate.app";
+          var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+          window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+    </script>
+
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/homepage.css">
+</head>
+
+<body class="fadeIn">
+    <div class=container-fluid>
+        <div class="media">
+            <img src='/img/jardine_logo.png' alt="logo" height="75" width="150">
+            <div class="media-body">
+                <h1 class="font-weight-light text-center">Jardine Executive Trainee Scheme (JETS)</h1>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="jumbotron">
+           
+
+
+            <h2 class="font-weight-light text-danger"><b>JETS Application Data Visualization Portal</b></h2>
+            <hr>
+            <p>
+                This portal assists in viewing, analyzing and understanding the data collected during the JETS
+                recruitment rounds in the year 2018-19.
+                <br>Using multiple visualization techniques, we allow you to interact and filter the data based on your
+                requirements to gain
+                valuable insights <br> from raw data.
+            </p>
+            <div class = 'row'>
+
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'phases')" id="defaultOpen">Testing Phases</button>
+                <button class="tablinks" onclick="openCity(event, 'filters')">Dimensions</button>
+                <button class="tablinks" onclick="openCity(event, 'centers')">Assessment Centers</button>
+                <button class="tablinks" onclick="openCity(event, 'charting')">Visualizations</button>
+            </div>
+
+            <div id="phases" class="tabcontent">
+                <br>
+                <h2 class="font-weight-light"><b>Testing Phases</b></h2>
+                <br>
+                <ol class="list-group ">
+                    <li class="list-group-item">Pymetrics Testing</li>
+                    <li class="list-group-item">TalentQ Assessment</li>
+                    <li class="list-group-item">On-demand Video Interview Round</li>
+                    <li class="list-group-item">Assessment Centre</li>
+                    <li class="list-group-item">Offer</li>
+                </ol>
+            </div>
+
+            <div id="filters" class="tabcontent">
+                <br>
+                <h2 class="font-weight-light"><b>Dimensions or Filters Available</b></h2>
+                <br>
+                <ol class="list-group ">
+                    <li class="list-group-item">Based on University (e.g. Tsinghua University, London School of
+                        Economics)</li>
+                    <li class="list-group-item">Based on Number of Applicants by University</li>
+                    <li class="list-group-item">Based on Assessment Centers (e.g. London, Beijing)</li>
+                    <li class="list-group-item">Based on Promotional Channels (e.g. LinkedIn, Jardines website)</li>
+                </ol>
+            </div>
+
+            <div id="centers" class="tabcontent">
+                <br>
+                <h2 class="font-weight-light"><b>Assessment Centers</b></h2>
+                <br>
+                <ol class="list-group">
+                    <li class="list-group-item">Beijing</li>
+                    <li class="list-group-item">Shanghai</li>
+                    <li class="list-group-item">Guangzhou</li>
+                    <li class="list-group-item">Hong Kong</li>
+                    <li class="list-group-item">Singapore</li>
+                    <li class="list-group-item">Vietnam</li>
+                    <li class="list-group-item">London</li>
+                </ol>
+            </div>
+
+            <div id="charting" class="tabcontent">
+                <br>
+                <h2 class="font-weight-light"><b>Visualizations</b></h2>
+                <br>
+                <div class="row">
+                    <div class="column">
+                        <img src="/img/funnelchart.jpg" alt="Funnel Chart" style="width:100%">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Funnel Chart</h3>
+                                Used to illustrate how the number of JETS applicants is filtered down across sequential
+                                stages
+                                throughout the recruitment process.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img src="/img/rowchart.jpg" alt="Row Chart" style="width:100%">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Row Charts</h3>
+                                Used to demonstrate the number of applications:
+                                <ul>
+                                    <li>per University</li>
+                                    <li>per Assessment Center</li>
+                                    <li>per Promotional Channel</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><br>
+ 
+        
+
+<div class = 'row'>
+            <form method='post'>
+                <div class='form-group'>
+                    <h5 style = 'color: darkblue'>Please Enter Password to procceed:</h5>
+                    <input type='password' class="form-control" placeholder="Enter Password" name = 'pwd' id='pwd' required>
+                    <div id='error'></div>
+                </div>
+
+                <button id="proceedButton" type="submit" formaction="/" style="margin-top:20px"><span>Proceed to
+                        Visualization Portal
+                    </span>
+                </button>
+            </form>
+        </div>
+
+
+        </div>
+
+
+        <div id="bottom">
+            <div class="mediaFooter text-center font-weight-light" style="width:100%">
+                <img src="/img/jardine_logo.png" alt="logo" height="60" width="110"><br>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/home.js">  </script>
+</body>
+
+</html>

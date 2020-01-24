@@ -1,0 +1,594 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <title>
+        Visualization
+    </title>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="//dc-js.github.io/dc.js/js/d3.js"></script>
+    <script type="text/javascript" src="/js/d3-funnel/dist/d3-funnel.js"></script>
+    <script type="text/javascript" src="//dc-js.github.io/dc.js/js/crossfilter.js"></script>
+    <script type="text/javascript" src="//dc-js.github.io/dc.js/js/dc.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/3.0.12/dc.css"
+        integrity="sha256-+ljPY6+jCmxVt1q1mWs/37w6FiKbc/TuqwlKZVkYwqE=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/3.0.12/dc.js"
+        integrity="sha256-PPGYknlq4DWUxkKB3F1Ag0kXRZ5XiMeK3M5xus5WdUA=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/3.0.12/dc.min.css"
+        integrity="sha256-3HUYdVnJGYSMfUhwTp5ffSOloOQdnWNBlcpLwgcuOcw=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/3.0.12/dc.min.js"
+        integrity="sha256-tPueaRCmnyQUbm3/TM+gNU2b2pQygMaI24ds8rvyjGg=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+    <script type="text/javascript" src="/js/amcharts3/amcharts/amcharts.js"></script>
+    <script type="text/javascript" src="/js/amcharts3/amcharts/funnel.js"></script>
+    <script type="text/javascript" src="//www.amcharts.com/lib/3/serial.js"></script>
+    <script type="text/javascript" src="//www.amcharts.com/lib/3/themes/light.js"></script>
+    <script type="text/javascript" src="//www.amcharts.com/lib/3/plugins/export/export.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+
+    <script type="text/javascript" src="/js/extractData.js"></script>
+    <script type="text/javascript" src="/js/performCalculations.js"></script>
+    <script type="text/javascript" src="/js/dataToCsv.js"></script>
+    <script type="text/javascript" src="/js/dataForTableNBar.js"></script>
+    <script type="text/javascript" src="/js/visualizeTable.js"></script>
+    <script type="text/javascript" src="/js/drawFunnel.js"></script>
+    <script type="text/javascript" src="/js/getScores.js"></script>
+    <script type="text/javascript" src="/js/pieChart.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+
+
+
+
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+        integrity="sha256-RPilbUJ5F7X6DdeTO6VFZ5vl5rO5MJnmSk4pwhWfV8A= sha384-xewr6kSkq3dBbEtB6Z/3oFZmknWn7nHqhLVLrYgzEFRbU/DHSxW7K3B44yWUN60D sha512-/Q1sBqvNZheW2yvAccKiu/xc/o2AtDS2jNBozDEqA/8Mk/IcH853wrwDSGqAdl7jFyOWOcefLtwDd3kYo276Hw=="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="//www.amcharts.com/lib/3/plugins/export/export.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- <link rel="stylesheet" href="/css/homepage.css"> -->
+
+
+</head>
+
+<body onload="load()" style="overflow-x:hidden;">
+    <!-- prevent to move the card away -->
+    <div class='row'>
+        <div class="col">
+            <!-- <div id="loader"></div> -->
+            <div class="loading">
+                <div class="loading-bar"></div>
+                <div class="loading-bar"></div>
+                <div class="loading-bar"></div>
+                <div class="loading-bar"></div>
+            </div>
+            <div id="loaderText">Please wait while we load the data....</div>
+        </div>
+    </div>
+
+
+    <div id="page-content-wrapper" class="fadeIn">
+
+        <!-- header -->
+
+        <div class="container-fluid">
+            <div class="media" id="header">
+                <img src='/img/jardine_logo.png' id="header-logo" alt="logo" height="75" width="150">
+                <div class="media-body">
+                    <h1 class="font-weight-light text-center">
+                        Jardine Executive Trainee Scheme (JETS)
+                    </h1>
+                </div>
+            </div>
+
+            <!-- </div> -->
+            <!-- header -->
+
+
+            <!-- content, min height prevent go under footer -->
+            <button class='btn btn-sm btn-outline-dark' id="snapButton" height="50" width="50" onclick="snapBack()">Snap
+                Back</button>
+            <button class='btn btn-sm btn-outline-dark' id='layout_button' onclick="enableMove()">Edit Layout</button>
+            <button class='btn btn-sm btn-outline-dark' id='confirm_button' onclick="disableMove()">Confirm</button>
+            <div class="contain" style="min-height: calc(100vh - 93px - 58px);">
+
+
+                <!-- filters and funnel chart, to swap -->
+                <div class="row">
+                    <div class="col-md-8">
+
+
+
+                        <div class="card border-secondary" id="funnelchart" ondrag="showSnapButton()"
+                            onresize="showSnapButton()">
+
+                            <div class="funnel_title card-header">
+                                <a class="reset" id="resetAll"
+                                    href="javascript:dc.filterAll();dc.renderAll();channelTable.dimension(remove_irrelevent_channel(info.channelGroup_table,channelChart.filters())).redraw();">Reset
+                                    All</a>
+                                <div class="funnel_header_group">
+                                    <table id="table_funnel_titles">
+                                        <tr>
+                                            <td id="funnel_title" class="selection">
+                                                Selected University:
+                                            </td>
+                                            <td id="funnel_title_content">
+                                                All
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="funnel_channel_title" class="selection">
+                                                Selected Promotional Channel:
+                                            </td>
+                                            <td id="funnel_channel_title_content">
+                                                All
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="funnel_ac_title" class="selection">
+                                                Selected AC:
+                                            </td>
+                                            <td id="funnel_ac_title_content">
+                                                All
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="dropdown">
+                                    <button type="button"
+                                        class="btn btn-compare btn-sm btn-outline-danger compare_btn notClicked tableLinks dropbtn"
+                                        id="compare_btn_uni">Compare By University <i
+                                            class="fa fa-caret-down"></i></button>
+                                    <div class="dropdown-content">
+                                        <a href="#compare_uniTable" id="uni_tab"
+                                            onclick="openCompareTable(event, 'compare_uniTable')">Table</a>
+                                        <a href="#compare_bar" id="uni_bar">Stacked Bar Chart</a>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown">
+                                    <button type="button"
+                                        class="btn btn-compare btn-sm btn-outline-danger compare_btn notClicked tableLinks dropbtn"
+                                        id="compare_btn_channel">Compare By Promotional Channel <i
+                                            class="fa fa-caret-down"></i></button>
+                                    <div class="dropdown-content">
+                                        <a href="#compare_channelTable" id="channel_tab"
+                                            onclick="openCompareTable(event, 'compare_channelTable')">Table</a>
+                                        <a href="#compare_bar" id="channel_bar">Stacked Bar Chart</a>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown">
+                                    <button type="button"
+                                        class="btn btn-compare btn-sm btn-outline-danger compare_btn notClicked tableLinks dropbtn"
+                                        id="compare_btn_ac">Compare By Assessment Centre <i
+                                            class="fa fa-caret-down"></i></button>
+                                    <div class="dropdown-content">
+                                        <a href="#compare_acTable" id="ac_tab"
+                                            onclick="openCompareTable(event, 'compare_acTable')">Table</a>
+                                        <a href="#compare_bar" id="ac_bar">Stacked Bar Chart</a>
+                                    </div>
+                                </div>
+                                <br>
+
+                            </div>
+
+                            <hr style="border-width: 2px; border-color: darkblue; margin-right:40%; margin-top:0%;">
+
+
+                            <!-- /card header -->
+
+
+                            <div class="card-body" id="funnel_container">
+
+                                <!-- funnel chart container -->
+                                <div class="row wrapper fadeIn" id="funnel_container_wrapper">
+                                    <div class="col">
+                                        <div id="rright"></div>
+                                    </div>
+                                    <div class="flex-column col-8">
+                                        <div id="rleft">
+                                            <div class="tabcontentt" id="armChart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /card body -->
+
+
+                        </div><br>
+
+                        <!-- end of card -->
+
+
+
+                        <div id='numbers'>
+                            <h5>The Numbers</h5>
+                            <hr style="border-width: 2px; border-color: darkblue; margin-right:10%; margin-top:0%;">
+                            <div id='num'>
+                                <div class="tab">
+                                    <button class="tablinks btn btn-outline-danger btn-sm"
+                                        onclick="change(event, 'Pymetrics')" id="defaultOpen">Pymetrics</button>
+                                    <button class="tablinks btn btn-outline-danger btn-sm"
+                                        onclick="change(event, 'TalentQ')">TalentQ</button>
+                                    <button class="tablinks btn btn-outline-danger btn-sm"
+                                        onclick="change(event, 'AC')">AC</button>
+                                    <button class="tablinks btn btn-outline-danger btn-sm"
+                                        onclick="change(event, 'PromotionalChannel')">Channel</button>
+                                    <button class="tablinks btn btn-outline-danger btn-sm"
+                                        onclick="change(event, 'University')">University</button>
+                                    <button class="tablinks btn btn-outline-success btn-sm"
+                                        onclick="change(event, 'Success')">Success</button>
+                                    <!-- <button class="tablinks" onclick="change(event, 'Videos')">Videos</button> -->
+                                </div>
+
+
+                                <div id="Pymetrics" class="tabcontent fadeIn">
+                                    <div id='pymetrics_title'></div>
+                                    <div class='row'>
+                                        <div id='py_score_chart'>
+                                        </div>
+                                        <div class='col'>
+                                            <p>
+                                                <div id='py_stats'></div>
+                                                <div id='py_avg'></div>
+                                                <div id='py_max'></div>
+                                                <div id='py_min'></div>
+                                                <div id='py_freq'></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div id="TalentQ" class="tabcontent fadeIn">
+                                    <div id='talentQ_title'></div>
+                                    <div class='row'>
+                                        <div class='col'>
+                                            <div id=v_title></div>
+                                            <div id='v_score_chart'>
+                                            </div>
+                                            <p>
+
+                                                <div id='v_stats'></div>
+                                                <div id='v_avg'></div>
+                                                <div id='v_max'></div>
+                                                <div id='v_min'></div>
+                                                <div id='v_freq'></div>
+                                            </p>
+                                        </div>
+                                        <div class='col'>
+                                            <div id=n_title></div>
+                                            <div id='n_score_chart'>
+                                            </div>
+                                            <p>
+                                                <div id='n_stats'></div>
+                                                <div id='n_avg'></div>
+                                                <div id='n_max'></div>
+                                                <div id='n_min'></div>
+                                                <div id='n_freq'></div>
+                                            </p>
+                                        </div>
+                                    </div><br>
+                                    <div class='row'>
+                                        <div class='col'>
+                                            <div id=tq_title></div>
+                                            <div id='tq_score_chart'>
+                                            </div>
+                                        </div>
+                                        <div class='col'>
+                                            <p>
+                                                <div id='tq_stats'></div>
+                                                <div id='tq_avg'></div>
+                                                <div id='tq_max'></div>
+                                                <div id='tq_min'></div>
+                                                <div id='tq_freq'></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="AC" class="tabcontent fadeIn">
+                                    <div class='col'>
+                                        <div id='ac_pie_title'></div>
+                                        <div id='ac_pie_chart'>
+                                        </div>
+                                    </div>
+                                    <div style='position: absolute; bottom:0;'>
+                                        <a href='#compare_bar' onclick="$('#ac_bar').click()"><i>View
+                                                breakdown</i></a>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div id="PromotionalChannel" class="tabcontent fadeIn">
+                                    <div class='col'>
+                                        <div id='channel_pie_title'></div>
+                                        <div id='channel_pie_chart'>
+                                        </div>
+
+                                    </div>
+                                    <div style='position: absolute; bottom:0;'>
+                                        <a href='#compare_bar' onclick="$('#channel_bar').click()"><i>View
+                                                breakdown</i></a>
+                                    </div>
+
+                                </div>
+
+                                <div id="University" class="tabcontent fadeIn">
+                                    <div class='col'>
+                                        <div id='uni_pie_title'></div>
+                                        <div id='uni_pie_chart'>
+                                        </div>
+
+                                    </div>
+                                    <div style='position: absolute; bottom:0;'>
+                                        <a href='#compare_bar' onclick="$('#uni_bar').click()"><i>View
+                                                breakdown</i></a>
+
+                                    </div>
+
+                                </div>
+                                <div id="Success" class="tabcontent fadeIn">
+                                    <div class='col'>
+                                        <div id='success_pie_title'></div>
+
+            
+                                        Show acceptance by
+                                          <select id = 'dropdown'>
+                                            <option value="success_uni">University</option>
+                                            <option value='success_ac'>Assessment Centre</option>
+                                            <option value='success_channel'>Promotional Channel</option>
+                                          </select>
+                                        <div id='success_pie_chart'>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- right: filters -->
+                    <div class="col-md-4" id="dimensions">
+
+                        <!-- AC RowChart -->
+
+                        <div class="card" id="ac_rowchart" ondrag="showSnapButton()">
+                            <div class="card-header rowbar_title">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h6>
+                                            Number of applications by Assessment Centre (AC)
+                                        </h6>
+                                    </div>
+                                    <div class="col-3">
+                                        <a class="reset" href="javascript:acChart.filterAll();dc.renderAll();">Reset</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <hr style="border-width: 2px; border-color: red; margin-right:10%; margin-top:0%;">
+                            <!--/card header-->
+
+                            <div class="card-body fadeIn" id="acChart"></div>
+
+                        </div>
+                        <!--/card-->
+
+
+                        <!-- /AC RowChart -->
+
+
+                        <!-- Channel RowChart -->
+
+                        <div class="card" id="channel_rowchart" ondrag="showSnapButton()">
+                            <div class="rowbar_title card-header">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h6>
+                                            Number of applications by Promotional Chanel
+                                        </h6>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="reset"
+                                            href="javascript:channelChart.filterAll();dc.renderAll();channelTable.dimension(remove_irrelevent_channel(info.channelGroup_table,channelChart.filters())).redraw();">Reset</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/card header-->
+                            <hr style="border-width: 2px; border-color: red; margin-right:10%; margin-top:0%;">
+                            <div class="card-body fadeIn" id="channelChart"></div>
+
+                        </div>
+
+                        <!--/card-->
+
+
+                        <!-- University RowChart -->
+
+                        <div class="card" id="uni_rowchart" ondrag="showSnapButton()">
+
+                            <div class="rowbar_title card-header">
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <h6>
+                                            Number of applications by University
+                                        </h6>
+
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="reset"
+                                            href="javascript:uniChart.filterAll();dc.renderAll();">Reset</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--card header-->
+                            <hr style="border-width: 2px; border-color: red; margin-right:10%; margin-top:0%;">
+
+
+                            <div class="card-body fadeIn" id="uniChart"></div>
+
+                        </div>
+
+                        <!--/card-->
+                        <!-- /University RowChart -->
+
+                    </div>
+
+
+                </div>
+                <!-- /filters and funnel chart-->
+
+                <div class="row" id="tab">
+                    <div class="card">
+                        <div class="card-header">
+                            Comparison Table
+                            <!-- buttons -->
+
+                            <button type="button" class="close close_table" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button> <br>
+                            <button class="btn btn-sm btn-outline-danger export" style="float: right; margin-right:5px; border-radius: 0px"
+                                id="export_uni" data-export="export">Export</button>
+                            <button class="btn btn-sm btn-outline-danger visualize" style="float: right; margin-right:15px; border-radius: 0px"
+                                id="visualize_uni">Show Stacked Bar Chart</button>
+                            <!-- /buttons -->
+
+
+                            <div id="paging">
+                                Showing <span class="begin"></span>-<span class="end"></span> of <span
+                                    class="size"></span>
+                                <span class="totalsize"></span> <br>
+                                <input id="" class="btn btn-outline-secondary last" type="button" value="Previous"
+                                    onclick="table_pagination(table, false);">
+                                <input id="" class="btn btn-outline-secondary next" type="button" value="Next"
+                                    onclick="table_pagination(table, true);">
+                            </div>
+                        </div>
+                        <!-- /card header -->
+
+
+                        <div class="card-body">
+                            <!-- <input class="form-control" id="myInput" type="text" placeholder="Search.."> -->
+                            <!-- Table for data by University -->
+                            <div class=" row tableContent compareItem fadeIn" id="compare_uniTable">
+                                <table class="table table-bordered table-hover table-responsive" id="uniTable">
+                                </table>
+                            </div>
+
+                            <!-- Table for data by Promotional Channel -->
+                            <div class="row compareItem tableContent fadeIn" id="compare_channelTable">
+                                <table class="table table-bordered table-hover table-responsive" id="channelTable">
+                                </table>
+                            </div>
+
+                            <!-- Table for data by Assessment Centre -->
+                            <div class="row compareItem tableContent fadeIn" id="compare_acTable">
+                                <table class="table table-bordered table-hover table-responsive" id="acTable">
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="row compareItem fadeIn" id="compare_bar">
+                    <div class="card" style="width:100%">
+                        <div class="card-header">
+                            Compare <span id="title_compare_bar"></span> by Stacked Bar Chart (at most 25 items)
+                            <button type="button" class="close close_bar" aria-label="Close"><span
+                                    aria-hidden="true">×</span></button>
+                        </div>
+                        <!-- /card header -->
+
+                        <div class="card-body" style="overflow-x: auto; overflow-y: auto;">
+                            <div id="gpBar"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- /compare_bar -->
+
+            </div>
+
+
+            <!-- /content -->
+
+            <!-- /page-content-wrapper -->
+
+            <!-- footer -->
+            <br>
+
+            <div class="mediaFooter text-center font-weight-light">
+                <img src="/img/jardine_logo.png" alt="logo" height="60" width="110"><br>
+                <a href='/' style='float:right'>Exit</a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- /footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4><button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        You are at most select 4 universities for comparison.
+                    </p>
+                    <p>
+                        Reset function will exceed the limit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal -->
+
+</body>
+
+<script type="text/javascript" src="/js/index.js"></script>
+
+<!-- or -->
+
+</html>

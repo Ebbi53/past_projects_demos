@@ -1,0 +1,594 @@
+#acChart{
+    overflow-x: auto; overflow-y: auto; height: 250px;
+   
+}
+
+#acChart svg{
+    margin-left: -32px;
+}
+
+#acChart g.row text{
+    fill: black
+}
+
+#acChart svg g g.axis{
+    display: none;
+}
+
+#ac_pie_chart svg {
+    margin-top: 5%;
+    overflow: visible;
+    /* padding:9%; */
+    padding-top: 0;
+    /* padding-left:30% */
+
+}
+
+#armChart {
+    width: 100%;
+    height: 550px;
+}
+
+.amcharts-chart-div  a{
+    display: none !important;
+}
+
+
+
+.amcharts-funnel-item > text > tspan{
+    font-size: 14px;
+}
+
+body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: black;
+    position:relative;
+    background-color: whitesmoke;
+    background-image: url("https://careers.jardines.com/storage/2018/08/jardines-home-page_20180827b_02_Artboard-1.png");
+
+}
+
+
+/* margin */
+.card{
+    margin:0px;
+    background-color: white;
+    border:0.5px solid rgb(240, 239, 239) !important;
+    padding: 0px;
+    overflow: auto;
+    position: relative
+  
+}
+
+
+.card-header{
+    background-color: inherit;
+    background-image: url("https://careers.jardines.com/storage/2018/08/jardines-home-page_20180827b_02_Artboard-1.png");
+    border-bottom: 0px;
+    color: darkblue
+}
+
+#channelChart{
+    overflow-x: auto; overflow-y: auto; height: 250px;
+
+}
+
+#channelChart svg{
+    margin-left: -32px;
+}
+
+#channelChart svg g g.axis{
+    display: none;
+}
+#channelChart g.row text{
+    fill: black
+}
+
+#channel_pie_chart svg{
+    margin-top: 5%;
+    overflow: visible;
+    /* padding:9%; */
+    padding-top: 0;
+    /* padding-left:30% */
+}
+
+/* close button */
+.close{
+    float: right;
+}
+
+#compare_btn{
+    margin:10px;
+}
+
+
+#compare_bar{
+    display:none;
+    margin:1px;
+    width:100%;
+}
+
+#confirm_button{
+    float: right;
+    /* display: none; */
+    border-radius: 0
+}
+
+.container-fluid{
+    width: 90%;
+    background-color: white;
+    padding: 0px;
+}
+
+.contain{
+    padding-bottom:4%;
+    background-image: url("https://careers.jardines.com/storage/2018/08/jardines-home-page_20180827b_02_Artboard-1.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    border-bottom: 0.5px lightgrey solid;
+}
+
+#d3Funnel {
+    display: inline-block;
+    position: relative;
+    width: 95%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+}
+
+.dc-chart rect.deselected{
+    fill: #e7dede;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 9999 !important;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 200;
+    font-size: small;  
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+
+#funnel_container_wrapper{
+    overflow: auto;
+}
+
+#funnel_title_noted, #funnel_content_noted{
+    color:lightslategray;
+    font-size: 12px;
+}
+
+.funnel_title{
+    background-color: inherit;
+    background-image: url("https://careers.jardines.com/storage/2018/08/jardines-home-page_20180827b_02_Artboard-1.png");
+    border-bottom: 0px;
+    color: darkblue !important ;
+}
+
+#gpBar  {
+    width: 1200px;
+    height: 600px;
+}
+
+#header{
+    padding-top:1%;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    
+}
+
+h1{
+    color: rgb(97, 95, 95);  
+}
+
+h6{
+    color: darkblue
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#layout_button{
+    float: right;
+    border-radius: 0
+}
+
+.legendLabel{
+    font-size: 14px;
+    padding: 3.5%;
+    color: black
+}
+
+.legendPerc{
+    text-align: right;
+    font-size: 14px;
+    color: black
+}
+
+#leftSide{
+    margin-left: 0.5%;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.loading-bar {
+    display: inline-block;
+    width: 10px;
+    height: 40px;
+    border-radius: 4px;
+    animation: loading 1s ease-in-out infinite;
+    margin-top:10%
+}
+.loading-bar:nth-child(1) {
+    background-color: #3498db;
+    animation-delay: 0;
+}
+.loading-bar:nth-child(2) {
+    background-color: #c0392b;
+    animation-delay: 0.09s;
+}
+.loading-bar:nth-child(3) {
+    background-color: #f1c40f;
+    animation-delay: .18s;
+}
+.loading-bar:nth-child(4) {
+    background-color: #27ae60;
+    animation-delay: .27s;
+}
+  
+@keyframes loading {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(1, 2.2);
+    }
+    40% {
+      transform: scale(1);
+    }
+}
+
+#loaderText{
+    color: darkblue;
+    display:inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo {
+    float: right;
+}
+
+.media  {
+    background-color: white;
+    color: #071a52;
+}
+
+.mediaFooter{
+    color: rgb(152, 163, 173) !important;
+    background-color: white;
+    padding: 2%
+}
+
+#numbers{
+    padding: 0.5%;
+    margin-top: 0.5%;
+    margin-left:2%
+
+}
+
+#num{
+
+    padding: 0.5%;
+    margin-top: 0.5%;
+    
+    width: 100%;
+    margin-left: 4%
+}
+
+
+.page_title {
+    text-align: center;
+}
+  
+#page-content-wrapper, #bottom {
+    display: none;
+    background-color: whitesmoke;
+}
+
+
+/* reset links */
+.reset{
+    color: rgb(219, 67, 67);
+    float: right;
+    font-style: italic 
+}
+
+
+#resetAll{
+    float:right;
+}
+
+#rright{
+    margin-top: 10px ;
+}
+
+.selection{
+    color: darkblue;
+}
+
+#snapButton{
+     visibility: hidden;
+     margin-left:50%;
+}
+
+span.badge{
+    height:10px;   
+}
+span#Application{
+    background-color:#fc181c;
+
+}
+span[id='Invite to Pymetrics']{
+    background-color: #fc6721;
+}
+span[id='Pymetrics Participated']{
+    background-color:#fd9d28
+}
+span[id='Pymetrics Passed']{
+    background-color:#fbcf30e8
+}
+span[id='Invite to TalentQ']{
+    background-color:#b1a8339d
+}
+span[id='TalentQ Participated']{
+    background-color:#b1dc2e
+}
+span[id='TalentQ Passed']{
+    background-color:#22d02c
+}
+span[id='Invite to VI']{
+    background-color:#1db2cc
+}
+span[id='VI Participated']{
+    background-color:#1656ce
+}
+span[id='VI Passed']{
+    background-color:#2b20cc
+}
+span[id='Invite to AC']{
+    background-color:#8921cc
+}
+span[id='AC Participated']{
+    background-color:#cb1874
+}
+span[id='AC Passed']{
+    background-color:#7554e7
+}
+span[id='Offer']{
+    background-color:#dddddd
+}
+span[id='On board']{
+    background-color:#999999
+}
+
+#success_pie_chart svg{
+    margin-top: 5%;
+    overflow: visible;
+    /* padding:9%; */
+    padding-top: 0;
+    /* padding-left:30% */
+}
+
+.svg-content-responsive {
+    display: inline-block;
+    /* position: absolute; */
+    top: 10px;
+    left: 0;
+}
+
+#tab {
+    display: none;
+    margin: 1px;
+}
+
+.tab{
+    border-bottom: 1px solid rgb(209, 23, 23); 
+    width: 70%
+}
+.tab button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.4s;
+    border-radius: 0;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: none;
+    border-top: none;
+    animation: fadeEffect 1s;
+    margin-top:1%;
+    overflow: auto;
+}
+
+#table {
+    text-align: center;
+}
+
+td {
+    height: 26.67px;
+}
+
+#table_funnel_titles{
+    font-weight: 500; 
+    color:darkblue
+
+}
+
+tspan{
+    font-size: 14px
+}
+
+#uniChart{
+    overflow-x: auto; 
+    overflow-y: auto; 
+    height: 300px;
+
+}
+
+#uniChart svg{
+    margin-left: -32px;
+}
+
+#uniChart svg g g.axis{
+    display: none;
+}
+#uniChart g.row text{
+    fill: black
+}
+
+#uni_pie_chart svg{
+    margin-top: 5%;
+    overflow: visible;
+    /* padding:9%; */
+    padding-top: 0;
+    /* padding-left:30% */
+}
+
+.wrapper {
+    background-color: white;
+    margin: 5px;
+}
+/* 
+.wrapLoad{
+    position: relative;
+} */
+
+
+[class*="card-header"] {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+::-webkit-scrollbar { width:0px; height:0px; padding:0px; margin:0px; }
+::-webkit-scrollbar-track { background: #f1f1f1; padding:2px; }
+::-webkit-scrollbar-thumb { background: rgb(151, 151, 151); border-radius:5px; margin:2px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+
+  /* // Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {     
+    #canvasFunnel{width: 100%;}
+    
+}
+    
+      /* small device (0-600px) */
+@media screen and (max-width: 767px) {  
+    #canvasFunnel{width: 100%;}
+    #header-logo{
+        height:50;
+        width:80;
+    }
+    #header-title{font-size:30px} 
+}
+
+     /* small device (0-520px) */
+@media screen and (max-width: 520px) { 
+    #acChart{
+        overflow-x: auto; overflow-y: auto; height: 150px;
+    }
+}
+
+
+
+/* Animations */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+  
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+  /* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+  
+    to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+  
+    to {opacity: 1;}
+  }
+
+    
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+    
