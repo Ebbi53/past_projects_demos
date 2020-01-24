@@ -4,10 +4,8 @@
 
 **Demos:**
 
-Screen recording:
-
 ![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/1.%20Stats%20Visualizer/Screen%20Recording%202020-01-24%20at%205.38.40%20PM.gif)
 
-Screenshot:
+**Contributions/Ownership:** 100% mine
 
-![Screen Capture](https://github.com/Ebbi53/demo_stats_visualizer_geo/blob/master/Screenshot%202020-01-24%20at%205.38.13%20PM.png)
+![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/1.%20Stats%20Visualizer/Screenshot%202020-01-25%20at%201.49.25%20AM.png)
