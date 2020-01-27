@@ -7,7 +7,7 @@
 * Set up the **Backend** of the application; **web-server** and **server-side** scripts to serve the Frontend and communicate with the APIs using **NodeJS**.
 * Cleaned the Frontend code by applying **Modular structure** to it. 
 * Used **[AmCharts](https://www.amcharts.com/), [d3-funnel](https://jakezatecky.github.io/d3-funnel/),** and **[CanvasJS](https://canvasjs.com/)** for different visualizations. And **[DC.js](https://dc-js.github.io/dc.js/)** for cross-filtering.
-* Initially deployed the application on **[Heroku](https://www.heroku.com/)** and then permanently on **[AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/).
+* Initially deployed the application on **[Heroku](https://www.heroku.com/)** and then permanently on **[AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)**.
 
 *Please note that due to data privcacy issues, the application is not available and accessible for general public which is why I have attached a short recording for demonstration.*
 
