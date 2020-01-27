@@ -1,6 +1,8 @@
 # GEO Stats Visualizer
 
-**Project Description:** Frontend using **RequireJS, BackBone.js, Bootstrap, and JQuery** to visualize the international students' data
+**Project Description:** Frontend using **RequireJS, BackBone.js, Bootstrap, and JQuery** to visualize the international students' data.
+
+*Please note that due to data privcacy issues, the application is not available and accessible for general public which is why I have attached a short recording for demonstration.*
 
 **Demos:**
 
