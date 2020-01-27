@@ -10,6 +10,8 @@
 
 ![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/3.%20Yacht%20Reservation%20System/Screen%20Recording%202020-01-24%20at%208.25.00%20PM.gif)
 
+---
+
 **Contributions/Ownership:** 100% mine
 
 ![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/3.%20Yacht%20Reservation%20System/Screenshot%202020-01-25%20at%201.50.49%20AM.png)
