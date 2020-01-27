@@ -1,10 +1,12 @@
 # GEO Stats Visualizer
 
-**Project Description:** Frontend to visualize the international students' data
+**Project Description:** Frontend using **RequireJS and BackBone.js** to visualize the international students' data
 
 **Demos:**
 
 ![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/1.%20Stats%20Visualizer/Screen%20Recording%202020-01-24%20at%205.38.40%20PM.gif)
+
+---
 
 **Contributions/Ownership:** 100% mine
 
