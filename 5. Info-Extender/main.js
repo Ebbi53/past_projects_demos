@@ -27,16 +27,12 @@ app.use(express.static(__dirname))
 app.post('/fileupload', (req, resp) => { //handling the fileupload request
   var t0 = performance(), msg,
     form = new formidable.IncomingForm();
-  // console.log({}.toString.call(req))
-  // console.log(req.params)
   var saveFile = new Promise((resolve, reject) => {
     form.parse(req, (err, fields, files) => {
-      // console.log(Object.entries(files));
       var oldpath = files.filetoupload.path,
         newpath = fileDir + files.filetoupload.name; //saving the file to my computer (local server)
       fs.rename(oldpath, newpath, function (err) {
         if (err) {
-          // throw err;
           reject(1);
         } else {
           msg = files.filetoupload.name + ' successfully uploaded!';
@@ -81,7 +77,6 @@ app.post('/fileupload', (req, resp) => { //handling the fileupload request
 
 app.get('/updatedHTML', (req, resp) => { //To handle the user's request to run Info-Extender
   var credentials = req.query.credentials.split(', ');
-  // credentials = credentials.split('\n')
   google.key = credentials[0];
   google.cx = credentials[1];
   resp.send('./updatedPDF.html');
@@ -116,7 +111,6 @@ app.get('/modalData', (req, resp) => { //To handle the user's click event on the
       resolve(1);
     })
   }).then(() => {
-    // console.log(results)
     resp.send(results);
   })
 })

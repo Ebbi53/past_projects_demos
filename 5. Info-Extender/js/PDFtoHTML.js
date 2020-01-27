@@ -2,7 +2,6 @@ const pdftohtml = require('pdftohtmljs'); // requires pdf2htmlEX (installed loca
 
 function PDFtoHTML(path) {
     return new Promise((resolve, reject) => {
-      // console.log(path)
       var converter = new pdftohtml(path, "./pdf.html");
       
       // presets: (ipad, default)

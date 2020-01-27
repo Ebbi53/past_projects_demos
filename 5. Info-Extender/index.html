@@ -95,7 +95,6 @@
                 for (key in links) {
                   links[key].onclick = showModal;
                 }
-                // console.log(links);
             });
           })
         })
@@ -105,16 +104,13 @@
   
   function showModal(e) {
     e.preventDefault();
-    // console.log(e.srcElement.id)
     new Promise((resolve, reject) => {
       var keyword = (e.srcElement.id);
       // .replace(/\\/g, '');
       $.get('modalData', {keyword: keyword}, (resp) => {
         $('.modal-header h3').html(keyword.split('_').join(' '))
-        // console.log(resp)
         $('#searchResults').html(resp.search);
         $('#newsResults').html(resp.news);
-        // console.log(resp.trends);
         resolve(1);
       })
     }).then(() => {
@@ -129,13 +125,8 @@
   })
 
   function addMessage(response) {
-    // document.onload = alert('asd');
-    // window.stop();
-    // document.onload = a();
     $("#uploadMsg").append(response.msg);
 
-    // $('head').append(response.header);
-    // $("#pdf").append(response.body);
     $("#pdf").attr("style", "height:1252.7px")
     $("#pdf").append(`<iframe width="100%" height="100%" frameborder="0" style="border:0" 
     src=${response.path} allowfullscreen></iframe>`)

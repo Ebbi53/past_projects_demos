@@ -6,7 +6,6 @@ function extractedKeywords(cvData) {
     return new Promise((resolve, reject) => {
         fs.open('./files/keywords.txt', 'r', (err, fd) => {
             if (err) {
-                // console.log(err);
                 reject(err);
             } else {
                 fs.readFile('./files/keywords.txt', 'utf8', (err, listData) => {
@@ -61,7 +60,6 @@ function extractedKeywords(cvData) {
                                                     }
                                                 }
                                                 if (found) {
-                                                    // extractedInfo.push(cvData[i]);
                                                     wstream.write(listData[j] + ' :-: ' + cvData[i] + '\n\n');
                                                     if (listData[j].toLowerCase() == 'university'
                                                         || listData[j].toLowerCase() == 'bachelor'
@@ -69,13 +67,9 @@ function extractedKeywords(cvData) {
                                                         || listData[j].toLowerCase() == 'gce' ||
                                                         listData[j].toLowerCase() == 'school') {
                                                         keywords.push(cvData[i]);
-                                                        // promises.push(googleSearch(cvData[i]), googleNews(cvData[i]));
                                                     } else {
                                                         keywords.push(listData[j]);
-                                                        // promises.push(googleSearch(listData[j]), googleNews(listData[j]));
                                                     }
-                                                    //wstream.write(listData[j] + '\n');
-                                                    // break;
                                                 }
                                             } else {
                                                 found = false;
@@ -93,11 +87,6 @@ function extractedKeywords(cvData) {
                         keywords = new Set(keywords);
                         keywords = Array.from(keywords);
                         resolve(keywords);
-                        // Promise.all(promises)
-                        // .then(data => {
-                        //   resolve('Google search and News of ' + data.length + ' keywords completed.')
-                        // })
-
                     }
                 });
 
