@@ -1,14 +1,24 @@
-# JETS-visualizer
+# Jardine Executive Training Scheme (JETS) applications' data visualizer
 
-Jardines Matheson 2019
+**Project Description:** This portal allows to visualize and analyse the data collected during the 5 rounds of JETS recruitment. The data is visualized in 4 different formats namely Row charts, Funnel chart, Table, and Stacked Bar chart. And cross-filtering is provided amongst all these charts based on 3 dimensions in the data (Universities, Promotional Channels, and Assessment Centers).
 
-This portal assists in viewing, analyzing and understanding the data collected during the JETS recruitment rounds in the year 2018-19. 
-Using multiple visualization techniques, it allows you to interact and filter the data based on your requirements to gain valuable insights 
-from raw data.
+**My responsibilty:**
+* **Project Manager**; collecting user requirements, tasks allocation, progress updates. Supervsied **POC** (Proof Of Concept) and UAT (User Acceptance Testing) stages.
+* Set up the **Backend** of the application; **web-server** and **server-side** scripts to serve the Frontend and communicate with the APIs using **NodeJS**.
+* Cleaned the Frontend code by applying **Modular structure** to it. 
+* Used **[AmCharts](https://www.amcharts.com/), [d3-funnel](https://jakezatecky.github.io/d3-funnel/),** and **[CanvasJS](https://canvasjs.com/)** for different visualizations. And **[DC.js](https://dc-js.github.io/dc.js/)** for cross-filtering.
+* Initially deployed the application on **[Heroku](https://www.heroku.com/)** and then permanently on **[AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/).
 
-* Website: https://jetsvisualizer.ehrdesign.info
-* For technical documentation and code explanation: https://github.com/Ebbi53/JETS-visualizer/wiki/1.-Home-Page  
-* For API Documentation: https://github.com/Ebbi53/JETS-visualizer/wiki/4.-Backend-JETS-API
+*Please note that due to data privcacy issues, the application is not available and accessible for general public which is why I have attached a short recording for demonstration.*
 
-In case of any queries, feel free to raise an issue on GitHub.  
-Contact: Oliver Leung (oliver@ehrdesign.biz)
+---
+
+**Demo:**
+
+![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/4.%20JETS%20Visualizer/WhatsApp%20Video%202019-01-23%20at%2017.00.42.gif)
+
+---
+
+**Contributions/Ownership:** 63% mine
+
+![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/4.%20JETS%20Visualizer/Screenshot%202020-01-27%20at%205.39.00%20PM.png)
