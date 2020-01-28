@@ -13,7 +13,7 @@
 
 **Demo:**
 
-![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/7.%20eLeave%20system/Screen%20Recording%202020-01-29%20at%204.18.38%20AM.gif)
+![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/6.%20eLeave%20system/Screen%20Recording%202020-01-29%20at%204.18.38%20AM.gif)
 
 ---
 
