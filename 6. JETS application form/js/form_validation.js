@@ -89,11 +89,6 @@ define(['jquery', 'file_upload'], function ($, fileupload) {
             })
         })
 
-        // return {
-        //     success: true,
-        //     hasDeclared: true
-        // }
-
         return ({
             success: $('[class*=incomplete]').length == 0,
             hasDeclared

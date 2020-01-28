@@ -74,7 +74,6 @@ define(['jquery', 'model/session', 'file_upload', 'api_config', "core-js/modules
                 form_data["tertiary_education"] = [form_data["tertiary_education"]];
                 form_data["working_exp"] = [form_data["working_exp"]];
                 form_data['token'] = Session.get('applicationtoken');
-                console.log(JSON.stringify(form_data));
                 i = 0;
 
               case 9:

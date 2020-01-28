@@ -31,9 +31,6 @@ require.config({
             deps: ['jquery', 'jquery.ui.widget'],
             exports: 'jQuery.fn.fileupload'
         },
-        // 'script': {
-        //     deps: ['fileupload', 'jquery.ui.widget', 'jquery.iframe-transport']
-        // },
     },
     map: {
         // '*' means all modules will get 'jquery-private'

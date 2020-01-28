@@ -39,7 +39,6 @@ define(['jquery', 'model/session', 'api_config', "core-js/modules/es6.array.find
 
               case 4:
                 form_data['token'] = Session.get('applicationtoken');
-                console.log(JSON.stringify(form_data));
                 i = 0;
 
               case 7:

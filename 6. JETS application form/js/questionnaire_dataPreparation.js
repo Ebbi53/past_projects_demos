@@ -29,31 +29,29 @@ define(['jquery', 'model/session', 'api_config'], function ($, Session, api_conf
 
         form_data['token'] = Session.get('applicationtoken')
 
-        console.log(JSON.stringify(form_data))
-
-        // for (let i = 0; i < 2 && !success; i++) {
-        //     await new Promise((resolve, reject) => {
-        //         $.ajax({
-        //             type: 'POST',
-        //             data: JSON.stringify(form_data),
-        //             contentType: 'application/json',
-        //             url: api_config.protocol + api_config.domain + api_config.path + 'minisurvey',   //TODO
-        //             success: async function (data) {
-        //                 //TODO
-        //                 if (data.result_code == 4) {
-        //                     success = true
-        //                 } else {
-        //                     success = false
-        //                 }
-        //                 resolve()
-        //             },
-        //             fail: function () {
-        //                 success = false
-        //                 resolve()
-        //             }
-        //         })
-        //     })
-        // }
+        for (let i = 0; i < 2 && !success; i++) {
+            await new Promise((resolve, reject) => {
+                $.ajax({
+                    type: 'POST',
+                    data: JSON.stringify(form_data),
+                    contentType: 'application/json',
+                    url: api_config.protocol + api_config.domain + api_config.path + 'minisurvey',   //TODO
+                    success: async function (data) {
+                        //TODO
+                        if (data.result_code == 4) {
+                            success = true
+                        } else {
+                            success = false
+                        }
+                        resolve()
+                    },
+                    fail: function () {
+                        success = false
+                        resolve()
+                    }
+                })
+            })
+        }
 
         return success;
     }

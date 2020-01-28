@@ -18,9 +18,6 @@ define(['jquery', 'underscore', 'backbone', 'text!template/preview.html', 'model
                         trigger: true
                     });
                 } else {
-                    // $('div.alert div#errorMsg').html('<strong>UNEXPECTED SERVER ERROR</strong><br><hr>Please try again later.')
-                    // $('div.alert').fadeIn(300);
-                    // $('#form_wrapper').css('opacity', 0.5);
                     Backbone.Events.trigger('showError', 'server')
                 }
             },
@@ -31,7 +28,6 @@ define(['jquery', 'underscore', 'backbone', 'text!template/preview.html', 'model
                 Router.navigate('', {
                     trigger: false
                 });
-                // $('footer').show();
                 $(window).scrollTop(0);;
                 this.remove();
                 $('#form_wrapper').show();
@@ -92,7 +88,6 @@ define(['jquery', 'underscore', 'backbone', 'text!template/preview.html', 'model
 
                 })
                 for (var key in uploadedFile.uploadData) {
-                    console.log(key)
                     $('#' + key + '_preview').text((uploadedFile.uploadData)[key])
                 }
 

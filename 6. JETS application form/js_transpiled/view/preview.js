@@ -54,7 +54,7 @@ define(['jquery', 'underscore', 'backbone', 'text!template/preview.html', 'model
       'click #back_button': function clickBack_button() {
         Router.navigate('', {
           trigger: false
-        }); // $('footer').show();
+        });
 
         $(window).scrollTop(0);
         ;
@@ -115,7 +115,6 @@ define(['jquery', 'underscore', 'backbone', 'text!template/preview.html', 'model
           $(this).text(content);
         });
         for (var key in uploadedFile.uploadData) {
-          console.log(key);
           $('#' + key + '_preview').text(uploadedFile.uploadData[key]);
         }
       });

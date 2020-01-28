@@ -35,7 +35,6 @@ define(['jquery', 'underscore', 'backbone', 'text!template/form.html', 'file_upl
         $(e.currentTarget).parents('div.parentWithSpecific').find('input.hasSpecifics').trigger('change');
       },
       'click .section_heading': function clickSection_heading(e) {
-        // console.log(e.currentTarget.children[0].children)
         $(e.currentTarget.nextElementSibling).slideToggle(300);
         $(e.currentTarget.children[0].children).toggleClass('hidden');
       },
@@ -43,7 +42,6 @@ define(['jquery', 'underscore', 'backbone', 'text!template/form.html', 'file_upl
         $('#select2-phone_mobile_country-container').text($(e.currentTarget).val());
       },
       'click a.nav-link': function clickANavLink(e) {
-        // console.log($($(e.currentTarget).attr('href')).offset().top)
         e.preventDefault();
         $(window).scrollTop($($(e.currentTarget).attr('href')).offset().top);
       },
@@ -79,11 +77,7 @@ define(['jquery', 'underscore', 'backbone', 'text!template/form.html', 'file_upl
                       });
                     } else {
                       Backbone.Events.trigger('showError', validationResults.hasDeclared ? 'validation' : 'declaration');
-                      validationResults.hasDeclared ? $(window).scrollTop($($('.sections').has('[class*=incomplete]')[0]).offset().top - (window.innerWidth <= 991 ? $('nav.navbar').outerHeight() : 0)) : null; // $('div.alert div#errorMsg').html('<strong>FORM VALIDATION FAILED</strong><br><hr>Few compulsory fields are incomplete. Please review your form')
-                      // $('div.alert').fadeIn(300);
-                      // setTimeout(() => {
-                      //     $('div.alert').fadeOut(300);
-                      // }, 4000);
+                      validationResults.hasDeclared ? $(window).scrollTop($($('.sections').has('[class*=incomplete]')[0]).offset().top - (window.innerWidth <= 991 ? $('nav.navbar').outerHeight() : 0)) : null;
                     }
 
                   case 4:
@@ -215,15 +209,12 @@ define(['jquery', 'underscore', 'backbone', 'text!template/form.html', 'file_upl
           false || !!document.documentMode;
 
         if (isIE) {
-          // console.log('IE')
-          // $('select').css('background', 'transparent');
           $('input[type=file]').click(function (e) {
             e.stopPropagation();
           });
           $('button.fileinput-button').click(function (e) {
             $(e.currentTarget).find('input').trigger('click');
           });
-        } else {// $('select').css('background', 'url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 100% 50%');
         }
 
         $('.nav-link').hover(function () {
@@ -235,7 +226,7 @@ define(['jquery', 'underscore', 'backbone', 'text!template/form.html', 'file_upl
         });
         $('#phone_mobile_country').select2({
           placeholder: 'Area Code'
-        }); // that.populateDropdown(country, data.country_list)
+        });
 
         that.populateDropdown('#study_field_tertiary_education', data.broad_subject);
         that.populateDropdown('.company_choice', data.companies);
@@ -265,23 +256,7 @@ define(['jquery', 'underscore', 'backbone', 'text!template/form.html', 'file_upl
           var temp;
 
           _loop(key);
-        } // for (let key in data.recruitment_source) {
-        //     $('#src').append(`<label style="display: block"><u><i>${key}</i></u></label>`)
-        //     data.recruitment_source[key].forEach(function (e) {
-        //         $('#src').append(`<div class="form-check"> <input type="checkbox" class="form-check-input" name="source" value= "${e == 'Other' ? `Other ${key}` : e}"><label class="form-check-label" for="specific_of_${that.underscore(e)}${e == 'Other' ? '_source' : ''}">${e}</label></div>`);
-        //         if (e == 'Career Fair' || e == 'Career Talk' || e == 'On-Campus Roadshow') {
-        //             $(`input[value="${e}"]`).addClass('withSpecifics')
-        //             data.dropBullets[that.underscore(e)].forEach(function (f) {
-        //                 $('#src').append(`<div class="form-check ${that.underscore(e)} career_specific hidden"> <input type="radio" name='specific_of_${that.underscore(e)}' class="form-check-input" name="source" value= "${f}"><label class="form-check-label">${f}</label></div>`)
-        //             })
-        //         }
-        //         if (e == 'Other' || e == 'Referral') {
-        //             $(`input[name="source"][value="${e == 'Other' ? `Other ${key}` : e}"]`).addClass('withSpecifics')
-        //             $('#src').append(`<input type="text" name="specific_of_${e == 'Other' ? `${key.split(' ')[0].toLocaleLowerCase()}_other_source` : 'referral'}" class="form-control-sm  ${e == 'Other' ? that.underscore(`Other ${key}`) : e.toLowerCase()} hidden" placeholder="Please Specify">`)
-        //         }
-        //     })
-        // }
-
+        }
 
         data.country_codes.forEach(function (e) {
           $('#phone_mobile_country').append('<option value="' + that.bracket_value(e) + '">' + e + '</option>');
@@ -295,12 +270,7 @@ define(['jquery', 'underscore', 'backbone', 'text!template/form.html', 'file_upl
         }, function () {
           $(this).css('color', 'black');
         });
-        fileupload.init(); // if ($(window).width() <= 786) {
-        //     $('.select2-selection').css('width', $('.select2-selection').width() - 10)
-        // }
-        // $('.delete').popover();
-        // var $new = $('.leadership_experience')
-        // $('.select2-selection').addClass('compulsory')
+        fileupload.init();
       });
     }
   });

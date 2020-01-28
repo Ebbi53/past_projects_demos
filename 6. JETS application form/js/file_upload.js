@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone',  'jquery.iframe-transport', 'jquery.ui.widget', 'fileupload', 'model/session', 'api_config'], function ($, _, Backbone, fileUploadIframe, fileUploadUI, fileupload, Session, api_config) {
+define(['jquery', 'underscore', 'backbone', 'jquery.iframe-transport', 'jquery.ui.widget', 'fileupload', 'model/session', 'api_config'], function ($, _, Backbone, fileUploadIframe, fileUploadUI, fileupload, Session, api_config) {
     var uploadData = {};
     var jqXHR = {};
 
@@ -83,20 +83,10 @@ define(['jquery', 'underscore', 'backbone',  'jquery.iframe-transport', 'jquery.
                         Backbone.Events.trigger('showError', 'fileType');
 
                     } else if (data.result.result_code == -3) {
-                        // $('div.alert div#errorMsg').html('<strong>FILE UPLOAD FAILED</strong><br><hr>File size is exceeding the limit.')
-                        // $('div.alert').fadeIn(300)
-                        // setTimeout(function() {
-                        //     $('div.alert').fadeOut(300);
-                        // }, 3500)
                         Backbone.Events.trigger('showError', 'fileSize')
                     } else if (data.result.result_code == -9 || data.result.result_code == -10) {
                         Session.update();
                     } else {
-                        // $('div.alert div#errorMsg').html('<strong>FILE UPLOAD FAILED</strong><br><hr>Please try again.')
-                        // $('div.alert').fadeIn(300)
-                        // setTimeout(function() {
-                        //     $('div.alert').fadeOut(300);
-                        // }, 3500)
                         Backbone.Events.trigger('showError', 'fileupload')
                     }
                 },
@@ -104,11 +94,6 @@ define(['jquery', 'underscore', 'backbone',  'jquery.iframe-transport', 'jquery.
                     $(this).parents('.form-group').children('div.uploadProgress').addClass('hidden');
                     $(this).parents('.form-group').find('div.progress div.progress-bar').css('width', 0);
                     $(this).parents('button').children('div').toggle();
-                    // $('div.alert div#errorMsg').html('<strong>UNEXPECTED SERVER ERROR</strong><br><hr>Please try again.')
-                    // $('div.alert').fadeIn(300)
-                    // setTimeout(function() {
-                    //     $('div.alert').fadeOut(300);
-                    // }, 3500)
                     jqXHR[$(this).attr('name')].statusText != 'abort' ? Backbone.Events.trigger('showError', 'server') : '';
                 }
             });

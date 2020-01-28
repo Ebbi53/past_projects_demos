@@ -9,7 +9,6 @@ define(['jquery', 'underscore', 'backbone', 'model/session'], function ($, _, Ba
             },
             'form': function () {
                 if (Session.get('applicationtoken')) {
-                    // console.log($('#body').find('#preview'))
                     if ($('#body').find('#preview').length == 0) {
                         require(['view/form'], function (formView) {
                             $('#body').html(new formView().el);
@@ -23,21 +22,6 @@ define(['jquery', 'underscore', 'backbone', 'model/session'], function ($, _, Ba
                         trigger: true
                     })
                 }
-                // if ($('#body').find('#preview').length == 0) {
-                //     Session.fetch({
-                //         success: function () {
-                //             require(['view/form'], function (formView) {
-                //                 $('#body').html(new formView().el);
-                //             });
-                //         },
-                //         error: function () {
-                //             Backbone.Events.trigger('showError', 'server')
-                //         }
-                //     })
-                // } else {
-                //     $('#form_wrapper').show();
-                //     $('#preview').remove();
-                // }
             },
             'preview': function () {
                 var that = this;
@@ -48,8 +32,6 @@ define(['jquery', 'underscore', 'backbone', 'model/session'], function ($, _, Ba
                         $('#body').append(new previewView().el);
                     })
                 } else {
-                    // $('#questionnaire_modal').modal('hide')
-                    // console.log('asdas')
                     if ($('#questionnaire_modal').length) {
                         $('#questionnaire_modal').modal('hide')
                         $('#questionnaire_modal').on('hidden.bs.modal', function (e) {
@@ -116,7 +98,6 @@ define(['jquery', 'underscore', 'backbone', 'model/session'], function ($, _, Ba
     $('div.alert span.closebtn').click(function (e) {
         $(e.currentTarget).parents('div.alert').fadeOut(300);
         $('div[class*=container] div.row').css('opacity', 1);
-        // $(window).scrollTop($('#uploaded_files').offset().top - $('div.alert').height() - 20);
         if ($('div.alert div#errorMsg').html().includes('TIMEOUT')) {
             if ($('#body').find('#preview').length) {
                 require(['router'], function (Router) {
@@ -129,7 +110,6 @@ define(['jquery', 'underscore', 'backbone', 'model/session'], function ($, _, Ba
             }
             $('.undoBtn').not(':disabled').trigger('click');
         }
-        // $(window).scrollTop($($(e.currentTarget).attr('href')).offset().top);
     })
 
     window.addEventListener('beforeunload', (event) => {
@@ -142,12 +122,4 @@ define(['jquery', 'underscore', 'backbone', 'model/session'], function ($, _, Ba
     });
 
     return new AppRouter();
-    // var init = function () {
-    //     var app_router = new AppRouter();
-    //     Backbone.history.start(); // Backbone.history.start();
-    // }
-
-    // return {
-    //     init: init
-    // };
 })

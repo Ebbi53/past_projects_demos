@@ -21,21 +21,6 @@ define(['jquery', 'underscore', 'backbone', 'model/session', "core-js/modules/es
             trigger: true
           })
         }
-        // if ($('#body').find('#preview').length == 0) {
-        //     Session.fetch({
-        //         success: function () {
-        //             require(['view/form'], function (formView) {
-        //                 $('#body').html(new formView().el);
-        //             });
-        //         },
-        //         error: function () {
-        //             Backbone.Events.trigger('showError', 'server')
-        //         }
-        //     })
-        // } else {
-        //     $('#form_wrapper').show();
-        //     $('#preview').remove();
-        // }
       },
       'preview': function preview() {
         var that = this;
@@ -45,8 +30,6 @@ define(['jquery', 'underscore', 'backbone', 'model/session', "core-js/modules/es
             $('#body').append(new previewView().el);
           })
         } else {
-          // $('#questionnaire_modal').modal('hide')
-          // console.log('asdas')
           if ($('#questionnaire_modal').length) {
             $('#questionnaire_modal').modal('hide')
             $('#questionnaire_modal').on('hidden.bs.modal', function (e) {
@@ -105,12 +88,12 @@ define(['jquery', 'underscore', 'backbone', 'model/session', "core-js/modules/es
     $('div.alert div#errorMsg').html('Thank You for your additional Information!');
     $('div.alert').removeClass().addClass('alert alert-success').fadeIn(300);
     setTimeout(function () {
-        $('div.alert').fadeOut(300);
+      $('div.alert').fadeOut(300);
     }, 3000)
-});
+  });
   $('div.alert span.closebtn').click(function (e) {
     $(e.currentTarget).parents('div.alert').fadeOut(300);
-    $('div[class*=container] div.row').css('opacity', 1); // $(window).scrollTop($('#uploaded_files').offset().top - $('div.alert').height() - 20);
+    $('div[class*=container] div.row').css('opacity', 1);
 
     if ($('div.alert div#errorMsg').html().includes('TIMEOUT')) {
       if ($('#body').find('#preview').length) {
@@ -124,7 +107,7 @@ define(['jquery', 'underscore', 'backbone', 'model/session', "core-js/modules/es
       }
 
       $('.undoBtn').not(':disabled').trigger('click');
-    } // $(window).scrollTop($($(e.currentTarget).attr('href')).offset().top);
+    }
 
   });
   window.addEventListener('beforeunload', function (event) {
@@ -135,11 +118,5 @@ define(['jquery', 'underscore', 'backbone', 'model/session', "core-js/modules/es
       event.returnValue = '';
     }
   });
-  return new AppRouter(); // var init = function () {
-  //     var app_router = new AppRouter();
-  //     Backbone.history.start(); // Backbone.history.start();
-  // }
-  // return {
-  //     init: init
-  // };
+  return new AppRouter();
 });
