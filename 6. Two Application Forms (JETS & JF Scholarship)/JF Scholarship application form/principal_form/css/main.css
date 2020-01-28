@@ -1,0 +1,198 @@
+.hidden {
+    display: none;
+}
+
+h1:not(.success) {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #eee;
+}
+
+h1 {
+    text-align: center;
+    color: #BB132F;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.successIcon {
+    color:green;
+}
+
+body {
+    font-size: 15px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 0 3px
+}
+
+
+#submitBtn {
+    margin: 50px auto;
+}
+
+#alertBox {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    z-index: 999;
+    /* color: #CC0000 !important; */
+    min-width: 20%;
+    /* background-color: #F2DEDE; */
+    /* border-color: #CC0000; */
+    /* padding: 30px; */
+    display: none;
+}
+
+#errorMsg {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+#errorMsg hr {
+    margin-top: 0;
+}
+
+.closebtn {
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+
+.closebtn:hover {
+    color: black;
+}
+
+.fa-asterisk {
+    font-size: 9px;
+    vertical-align: top;
+    color: red;
+}
+
+.logo {
+    margin: 30px 15px;
+    width: 120px;
+    height: 65px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 1.5px;
+    margin-left: 0px !important;
+}
+
+h5 {
+    margin-bottom: 40px;
+}
+
+.text-muted {
+    font-weight: normal;
+}
+
+@keyframes dot-keyframes {
+    0% {
+        opacity: .4;
+        transform: scale(1, 1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        opacity: .4;
+        transform: scale(1, 1);
+    }
+}
+
+.loading-dots {
+    font-size: 0.875rem;
+    text-align: center;
+    width: 100%;
+}
+
+.loading-dots--dot {
+    animation: dot-keyframes 1.5s infinite ease-in-out;
+    background-color: #0c5460;
+    border-radius: 3px;
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    margin-right: 2px;
+}
+
+.loading-dots--dot:nth-child(2) {
+    animation-delay: .5s;
+}
+
+.loading-dots--dot:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@media only screen and (max-width: 576px){
+    h1 {
+        font-size: 30px;
+    }
+
+    h4, h3 {
+        font-size: 20px;
+    }
+    
+    h5 {
+        font-size: 18px;
+    }
+
+    .successIcon {
+        font-size: 40px
+    }
+
+    h1.success {
+        font-size: 28px
+    }
+}
+
+.fadeIn {
+    -webkit-animation: fadein 0.6s; /* Safari and Chrome */
+    -moz-animation: fadein 0.6s; /* Firefox */
+    -ms-animation: fadein 0.6s; /* Internet Explorer */
+    -o-animation: fadein 0.6s; /* Opera */
+    animation: fadein 0.6s;
+	
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

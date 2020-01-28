@@ -1,1 +1,0 @@
-define(["jquery","underscore","backbone","bootstrap","router"],function(a,b,c){return{init:function(){console.log("Version: 1.2"),c.history.start()}}});
