@@ -7,7 +7,8 @@
 3. Highlight these identified keywords on the document as clickable links and present this updated document on the frontend using  npm module named [pdf2htmlEX](https://coolwanglu.github.io/pdf2htmlEX/) for PDFs and [mammoth](https://www.npmjs.com/package/mammoth) for Word documents.
 4. On click of any of these keywords, perform a Google search using **[Google Search API](https://developers.google.com/custom-search)** and get Google News and Google Trends information using **[google-news-rss](https://www.npmjs.com/package/google-news-rss)** and **[google-trends-api](https://www.npmjs.com/package/google-trends-api)** npm modules respectively.
 
-Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and developed this first workable prototype in about 2 weeks.
+* The **Backend** of the application i.e. the **web-server** and **server-side** scripts are setup using **[NodeJS](https://nodejs.org/en/)** along with the **[ExpressJS](https://expressjs.com/)**.
+* Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and developed this first workable prototype in about 2 weeks.
 
 *Please note that I have attached a recording (GIF) for demonstration. If you want to have a proper look at the video, please download the **.mp4** video file from above*
 
