@@ -4,7 +4,7 @@
 
 **My responsibilty:**
 * **Project Manager**; collecting user requirements, tasks allocation, progress updates. Supervsied **POC** (Proof Of Concept) and UAT (User Acceptance Testing) stages.
-* Set up the **Backend** of the application; **web-server** and **server-side** scripts to serve the Frontend and communicate with the APIs using **NodeJS**.
+* Set up the **Backend** of the application; **web-server** and **server-side** scripts to serve the Frontend and communicate with the APIs using **[NodeJS](https://nodejs.org/en/)** along with **[ExpressJS](https://expressjs.com/)**.
 * Cleaned the Frontend code by applying **Modular structure** to it. 
 * Used **[AmCharts](https://www.amcharts.com/), [d3-funnel](https://jakezatecky.github.io/d3-funnel/),** and **[CanvasJS](https://canvasjs.com/)** for different visualizations. And **[DC.js](https://dc-js.github.io/dc.js/)** for cross-filtering.
 * Initially deployed the application on **[Heroku](https://www.heroku.com/)** and then permanently on **[AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)**.
