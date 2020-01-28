@@ -11,7 +11,7 @@
 
 Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and deployed the application in around 4 weeks.
 
-*Please note that the application is not currently available live on the internet which is why I have attached a short recording (GIF) for demonstration. If you want to have a proper look at the video, please download the .mov video file from above*
+*Please note that the application is not currently available live on the internet which is why I have attached a short recording (GIF) for demonstration. If you want to have a proper look at the video, please download the **.mov** video file from above*
 
 **Live:** https://jets.jardinesrecruit.com/form/
 
