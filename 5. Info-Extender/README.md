@@ -1,1 +1,20 @@
 # Information Extender
+
+**Project Description:** A web application to make any type of document (resumes, essays, research papers) easily understandable and readable. The detailed steps of this process includes:
+1. Parse the document to extract the data using [resume-parser](https://www.npmjs.com/package/resume-parser) npm module.
+2. Identify and extract the interesting and difficult keywords from that data using a predefined list of keywords stored at the backend.
+    * This predefined list was compiled by using different relevant datasets from the internet and then cleaning the final combined dataset.
+3. Highlight these identified keywords on the document as clickable links and present this updated document on the frontend using  npm module named [pdf2htmlEX](https://coolwanglu.github.io/pdf2htmlEX/) for PDFs and [mammoth](https://www.npmjs.com/package/mammoth) for Word documents.
+4. On click of any of these keywords, perform a Google search using **[Google Search API](https://developers.google.com/custom-search)** and get Google News and Google Trends information using **[google-news-rss](https://www.npmjs.com/package/google-news-rss)** and **[google-trends-api](https://www.npmjs.com/package/google-trends-api)** npm modules respectively.
+
+---
+
+**Demo:**
+
+![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/5.%20Info-Extender/Screen%20Recording%202020-01-28%20at%201.11.51%20AM.gif)
+
+---
+
+**Contributions/Ownership:** 100% mine
+
+![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/5.%20Info-Extender/Screenshot%202020-01-28%20at%204.49.23%20PM.png)

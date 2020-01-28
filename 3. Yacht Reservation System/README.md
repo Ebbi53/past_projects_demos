@@ -3,7 +3,7 @@
 **Project Description:** 
 * Used a reservation platform service provided by [Planyo](https://www.planyo.com/) to built a Yacht Reservation System.
 * Configured the already provided standard frontend from [the platform](https://www.planyo.com/) using basic **HTML, CSS, and JavaScript scripts** to meet other Company specific requirements.
-* Used **[Babel.js](https://babeljs.io/)** to transpile the JS code from ES6 to ES5 for IE compatibility.
+* Used **[Babel.js](https://babeljs.io/)** to **transpile** the JS code from ES6 to ES5 and to include **polyfills** for IE compatibility.
 * Extended the pricing logic provided by [the platform](https://www.planyo.com/) by using a **PHP script** and hosting it on **AWS EC2**.
 * Used **LAMP Stack** for server configuration and **AWS SES (Simple Email Service)** for setting up SMTP.
 
