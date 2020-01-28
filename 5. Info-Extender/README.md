@@ -9,11 +9,13 @@
 
 Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and developed this first workable prototype in about 2 weeks.
 
+*Please note that I have attached a recording (GIF) for demonstration. If you want to have a proper look at the video, please download the **.mp4** video file from above*
+
 ---
 
 **Demo:**
 
-![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/5.%20Info-Extender/Screen%20Recording%202020-01-28%20at%201.11.51%20AM.gif)
+![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/5.%20Info-Extender/Screen%20Recording%202020-01-28%20at%201.11.51%20AM.gif)
 
 ---
 
