@@ -1,6 +1,6 @@
 # Jardines eLeave System
 
-**Project Description:** A Leave management system which allows all the employees to apply for leaves and check their records. On top of this, Managers and Team heads can endorse, approve, and/or reject their team members' leaves. This system was founded few years ago and I helped with its upgrade and maintenance in the following ways:
+**Project Description:** A Leave management system which allows all the employees to apply for leaves and check their leave records. On top of this, Managers and Team heads can endorse, approve, and/or reject their team members' leaves. This system was founded few years ago and I helped with its upgrade and maintenance in the following ways:
 
 * Upgraded the standard HTML tables into more interactive tables with the ability to sort/order, group, and search/filter using a plugin called **[DataTables](https://datatables.net/)**. Also, made the tables more responsive and collapsable.
 * Used **[Bootstrap](https://getbootstrap.com/)** to improved the UI of the application by making it more interactive and responsive.
