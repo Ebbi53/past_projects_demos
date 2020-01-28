@@ -5,9 +5,9 @@
 1. Collecting user-defined variables
 2. **Cleaning** the data fetched from MySQL database
 3. Parsing the **JSON** data into **CSV** format with the schema specified by the IBM team
-4. Converting different formats (word documents and images) of candidates' resumes/CVs into PDF format using [libreOffice](https://www.libreoffice.org/)
+4. Converting different formats (word documents and images) of candidates' resumes/CVs into PDF format using **[libreOffice](https://www.libreoffice.org/)**
 5. Generating some statistics of the parsing process
-6. Archiving and Uploading the parsed data to IBM servers using sFTP for further processing using [ArchiveJS](https://www.archiverjs.com/archiver) and [node-ssh](https://www.npmjs.com/package/node-ssh) modules respectively.
+6. Archiving and Uploading the parsed data to IBM servers using sFTP for further processing using **[ArchiveJS](https://www.archiverjs.com/archiver)** and **[node-ssh](https://www.npmjs.com/package/node-ssh)** modules respectively.
 
 ---
 
