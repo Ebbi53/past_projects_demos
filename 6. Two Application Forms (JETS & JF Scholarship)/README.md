@@ -33,7 +33,7 @@ Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-w
 
 **Contributions/Ownership:** 
 
-**1. JF Scholarship** (80% mine)
+**1. JF Scholarship** (70% mine)
 
 ![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/6.%20Two%20Application%20Forms%20(JETS%20%26%20JF%20Scholarship)/JF%20Scholarship%20application%20form/Screenshot%202020-01-29%20at%202.50.41%20AM.png)
 
