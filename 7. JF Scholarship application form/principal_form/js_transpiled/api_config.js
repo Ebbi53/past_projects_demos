@@ -1,0 +1,5 @@
+define({
+    protocol: 'https://',
+    domain: 'app.ehrdesign.com',
+    path: '/rest/jfapp_dev2/'
+})
