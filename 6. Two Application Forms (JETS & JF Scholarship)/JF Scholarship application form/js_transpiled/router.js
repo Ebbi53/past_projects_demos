@@ -3,11 +3,6 @@
 define(['jquery', 'underscore', 'backbone', 'model/session', "core-js/modules/es7.array.includes", "core-js/modules/es6.string.includes", "core-js/modules/es6.array.find"], function ($, _, Backbone, Session, _es7Array, _es6String, _es6Array) {
   var AppRouter = Backbone.Router.extend({
     routes: {
-      // '': function _() {
-      //   require(['view/privacy_notice'], function (privacy_noticeView) {
-      //     $('#body').html(new privacy_noticeView().el);
-      //   });
-      // },
       '': function _() {
         if ($('#body').find('#preview').length == 0) {
           Session.fetch()
@@ -20,7 +15,6 @@ define(['jquery', 'underscore', 'backbone', 'model/session', "core-js/modules/es
               Backbone.Events.trigger('showError', 'server')
             })
         } else {
-          // $(window).scrollTop(0);
           $('#form_wrapper').show();
           $('#preview').remove();
         }
@@ -81,7 +75,7 @@ define(['jquery', 'underscore', 'backbone', 'model/session', "core-js/modules/es
   Backbone.Events.on('showError', showError);
   $('div.alert span.closebtn').click(function (e) {
     $(e.currentTarget).parents('div.alert').fadeOut(300);
-    $('div[class*=container] div.row').css('opacity', 1); // $(window).scrollTop($('#uploaded_files').offset().top - $('div.alert').height() - 20);
+    $('div[class*=container] div.row').css('opacity', 1);
 
     if ($('div.alert div#errorMsg').html().includes('TIMEOUT')) {
       if ($('#body').find('#preview').length) {
@@ -95,7 +89,7 @@ define(['jquery', 'underscore', 'backbone', 'model/session', "core-js/modules/es
       }
 
       $('.undoBtn').not(':disabled').trigger('click');
-    } // $(window).scrollTop($($(e.currentTarget).attr('href')).offset().top);
+    }
 
   });
   window.addEventListener('beforeunload', function (event) {

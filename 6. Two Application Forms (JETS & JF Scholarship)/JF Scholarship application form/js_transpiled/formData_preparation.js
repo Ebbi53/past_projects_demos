@@ -223,7 +223,6 @@ define(['jquery', 'model/session', 'file_upload', 'api_config', "core-js/modules
 
                   form_data['token'] = Session.get('applicationtoken');
                 });
-                console.log(form_data);
                 _loop =
                   /*#__PURE__*/
                   regeneratorRuntime.mark(function _loop(_i2) {
@@ -301,11 +300,9 @@ define(['jquery', 'model/session', 'file_upload', 'api_config', "core-js/modules
                                     return _ref2.apply(this, arguments);
                                   };
                                 }()).fail(function (data, textStatus) {
-                                  // console.log(textStatus)s
-                                  // console.log(data)
                                   success = false;
                                 }).always(function (textStatus) {
-                                  resolve(); // console.log(textStatus)
+                                  resolve();
                                 });
                             });
 

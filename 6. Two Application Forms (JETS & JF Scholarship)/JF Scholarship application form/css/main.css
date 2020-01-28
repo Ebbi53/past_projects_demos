@@ -120,10 +120,6 @@ body {
     padding-left: 7px;
 }
 
-/* .datepicker {
-    margin: 0px !important;
-} */
-
 .datepicker-dropdown {
     font-size: 12px;
 }
@@ -212,12 +208,6 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/* .input-group-prepend {
-    color: #d8d5d5;
-}
- */
-
 #landing_page {
     margin-top: 5%;
 }
@@ -236,8 +226,6 @@ h2 {
 }
 
 .logo {
-    /* height: px; */
-    /* padding: 20px; */
     margin-left: 0px;
     padding-left: 20px;
     height: 108px;
@@ -295,11 +283,6 @@ div.uploadProgress .row {
     color: white;
 }
 
-
-/* .success_wrapper {
-margin: 40px;
-} */
-
 div.success_wrapper div.row img {
     margin: 30px 15px;
 }
@@ -317,7 +300,6 @@ div.success_wrapper div.row img {
 }
 
 .navbar-toggler_container {
-    /* margin-left: 80%; */
     padding-right: 0px;
 }
 
@@ -410,7 +392,6 @@ p:not(div.section_heading p) {
     border: none;
     border-bottom: 2px solid #115798;
     width: 100%
-    /* padding: 8px; */
 }
 
 .section_body {
@@ -564,9 +545,6 @@ p:not(div.section_heading p) {
     .scholarship input {
         margin-bottom: 15px;
     }
-    /* .logo {
-        display: none;
-    } */
     .scholarship input {
         margin-bottom: 15px;
     }
@@ -592,21 +570,12 @@ p:not(div.section_heading p) {
     .select2-dropdown {
         margin-left: -10px;
     }
-    /* #date_of_birth {
-        width: 80%;
-        margin-left: 10px !important;
-    } */
     #current_residential_address {
         margin-left: 8px;
     }
     .input-group {
         margin-left: 10px
     }
-    /* .from,
-    .to {
-        width: 100%;
-        margin: 0px;
-    } */
     .input-group-append,
     .input-group-prepend {
         width: 100%;
@@ -636,11 +605,6 @@ p:not(div.section_heading p) {
     font-weight: normal;
     margin: initial
 }
-
-
-/* .form-check-inline {
-    margin-right: 40px !important
-} */
 
 .specifyInputBoxDiv {
     margin: 10px 10px;
@@ -681,22 +645,10 @@ select {
     cursor: pointer;
 }
 
-
-/* .select2-container--default .select2-selection--single .select2-selection__arrow b {
-display: none !important;
-} */
-
 span.select2-selection {
-    /* background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 100% !important; */
     height: calc(1.8125rem + 2px) !important;
-    /* padding: .25rem .5rem !important; */
     border: 0.5px solid lightgrey;
 }
-
-
-/* input.datepicker {
-background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 100% !important;
-} */
 
 .incomplete-label {
     color: #CC0000;

@@ -32,14 +32,10 @@ define(['jquery', 'underscore', 'backbone', 'text!template/preview.html', 'formD
 
                     if (status != 'Session updated') {
                       if (status) {
-                        // Session.set('complete', true);s
                         Router.navigate('success', {
                           trigger: true
                         });
                       } else {
-                        // $('div.alert div#errorMsg').html('<strong>UNEXPECTED SERVER ERROR</strong><br><hr>Please try again later.')
-                        // $('div.alert').fadeIn(300);
-                        // $('#form_wrapper').css('opacity', 0.5);
                         Backbone.Events.trigger('showError', 'server');
                       }
                     }
@@ -73,7 +69,7 @@ define(['jquery', 'underscore', 'backbone', 'text!template/preview.html', 'formD
       'click #back_button': function clickBack_button() {
         Router.navigate('', {
           trigger: true
-        }); // $(window).scrollTop(0);
+        }); 
       }
     },
     render: function render() {
@@ -88,7 +84,7 @@ define(['jquery', 'underscore', 'backbone', 'text!template/preview.html', 'formD
         } else {
           $('body').css('position', 'static');
           $('footer').css('bottom', 0);
-        } // console.log(uploadedFile.getFileURL())
+        } 
 
         if (!(/*@cc_on!@*/ false || !!document.documentMode)) {
           window.onafterprint = function () {

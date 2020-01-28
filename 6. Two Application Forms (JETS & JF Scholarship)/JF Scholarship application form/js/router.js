@@ -1,44 +1,22 @@
 define(['jquery', 'underscore', 'backbone', 'model/session'], function ($, _, Backbone, Session) {
     var AppRouter = Backbone.Router.extend({
         routes: {
-            //     '': function () {
-            //         require(['view/privacy_notice'], function (privacy_noticeView) {
-            //             $('#body').html(new privacy_noticeView().el);
-            //         })
-            //     },
             '': function () {
-                // console.log($('div.alert'))
                 if ($('#body').find('#preview').length == 0) {
-                    // Session.fetch()
-                    //     .done(function () {
-                    require(['view/form'], function (formView) {
-                        $('#body').html(new formView().el);
-                    });
-                    // })
-                    // .fail(function () {
-                    //     Backbone.Events.trigger('showError', 'server')
-                    // })
+                    Session.fetch()
+                        .done(function () {
+                            require(['view/form'], function (formView) {
+                                $('#body').html(new formView().el);
+                            });
+                        })
+                        .fail(function () {
+                            Backbone.Events.trigger('showError', 'server')
+                        })
                 } else {
                     $('#form_wrapper').show();
                     $('#preview').remove();
                 }
 
-                // if (Session.get('complete')) {
-                //     Session.set('complete', false)
-                //     this.navigate('', {
-                //         trigger: true
-                //     })
-                // } else {
-                //     if ($('#body').find('#preview').length == 0) {
-                //         require(['view/form'], function (formView) {
-                //             $('#body').html(new formView().el);
-                //         });
-                //     } else {
-                //         // $(window).scrollTop(0);
-                //         $('#form_wrapper').show();
-                //         $('#preview').remove();
-                //     }
-                // }
             },
             'preview': function () {
                 if ($('#body').find('#form_wrapper').length) {
@@ -53,23 +31,16 @@ define(['jquery', 'underscore', 'backbone', 'model/session'], function ($, _, Ba
                 }
             },
             'success': function () {
-                // if (Session.get('complete')) {
-                //     Session.set('complete', false)
-                //     this.navigate('', {
-                //         trigger: true
-                //     })
-                // } else {
-                // }
-                // if (Session.get('applicationtoken')) {
-                require(['view/success'], function (successView) {
-                    $('#body').html(new successView().el);
-                })
-                // } else {
-                //     // Session.set('complete', false)
-                //     this.navigate('', {
-                //         trigger: true
-                //     })
-                // }
+                if (Session.get('applicationtoken')) {
+                    require(['view/success'], function (successView) {
+                        $('#body').html(new successView().el);
+                    })
+                } else {
+                    // Session.set('complete', false)
+                    this.navigate('', {
+                        trigger: true
+                    })
+                }
             },
         },
     });
@@ -103,7 +74,6 @@ define(['jquery', 'underscore', 'backbone', 'model/session'], function ($, _, Ba
     $('div.alert span.closebtn').click(function (e) {
         $(e.currentTarget).parents('div.alert').fadeOut(300);
         $('div[class*=container] div.row').css('opacity', 1);
-        // $(window).scrollTop($('#uploaded_files').offset().top - $('div.alert').height() - 20);
         if ($('div.alert div#errorMsg').html().includes('TIMEOUT')) {
             if ($('#body').find('#preview').length) {
                 require(['router'], function (Router) {
@@ -116,7 +86,6 @@ define(['jquery', 'underscore', 'backbone', 'model/session'], function ($, _, Ba
             }
             $('.undoBtn').not(':disabled').trigger('click');
         }
-        // $(window).scrollTop($($(e.currentTarget).attr('href')).offset().top);
     })
 
     window.addEventListener('beforeunload', (event) => {
@@ -128,29 +97,5 @@ define(['jquery', 'underscore', 'backbone', 'model/session'], function ($, _, Ba
         }
     });
 
-    // window.addEventListener('unload', function (event) {
-    //     that.t1 = Date.now();
-    //     // console.log(location.hash)
-    //     // if (location.hash != '') {
-    //     //     console.log(event);
-    //     //     event.preventDefault();
-    //     //     Session.set('complete', false)
-    //     //     app_router.navigate('', {
-    //     //         trigger: true
-    //     //     })
-    //     // }
-    // });
-
-    // $(document).ready(function () {
-    //     console.log(that.t1)
-    // })
-
     return new AppRouter();
-    // var init = function () {
-    //     Backbone.history.start(); // Backbone.history.start();
-    // }
-
-    // return {
-    //     init: init
-    // };
 })

@@ -1,5 +1,5 @@
-define(['jquery', 'model/session', 'file_upload', 'api_config'], function($, Session, fileUpload, api_config) {
-    return async function() {
+define(['jquery', 'model/session', 'file_upload', 'api_config'], function ($, Session, fileUpload, api_config) {
+    return async function () {
         var form_data = {}
         var source = []
         var other_scholarships = []
@@ -23,7 +23,7 @@ define(['jquery', 'model/session', 'file_upload', 'api_config'], function($, Ses
             obj['others-grades'] = other_grades
         }
 
-        $('.sections').each(function() {
+        $('.sections').each(function () {
             var section = $(this)
             var main_key = section.attr('id');
             var sub_data = {}
@@ -32,9 +32,9 @@ define(['jquery', 'model/session', 'file_upload', 'api_config'], function($, Ses
 
             if (main_key == 'activities') {
                 var temp = []
-                section.find('.leadership_experience').each(function() {
+                section.find('.leadership_experience').each(function () {
                     var temp_data = {}
-                    $(this).find('input').each(function() {
+                    $(this).find('input').each(function () {
                         temp_data[$(this).attr('name')] = $(this).val()
                     })
                     temp.push(temp_data)
@@ -52,7 +52,7 @@ define(['jquery', 'model/session', 'file_upload', 'api_config'], function($, Ses
                 }
             } else {
 
-                section.find('input, select, textarea').each(function() {
+                section.find('input, select, textarea').each(function () {
                     key = $(this).attr('name')
                     switch (key) {
                         case 'gender':
@@ -169,7 +169,7 @@ define(['jquery', 'model/session', 'file_upload', 'api_config'], function($, Ses
                             if ($(this).is(':checked')) {
                                 if ($(this).val() == 'yes') {
                                     value = 'yes'
-                                    $('.scholarship').each(function() {
+                                    $('.scholarship').each(function () {
                                         var scholarship = {}
                                         scholarship['scholarship_name'] = $(this).find('.scholarship_name').val()
                                         scholarship['scholarship_type'] = $(this).find('.scholarship_type').val()
@@ -214,52 +214,40 @@ define(['jquery', 'model/session', 'file_upload', 'api_config'], function($, Ses
             form_data['token'] = Session.get('applicationtoken')
         })
 
-        console.log(form_data)
+        for (let i = 0; i < 2 && !success; i++) {
+            await new Promise((resolve, reject) => {
+                $.ajax({
+                    type: 'POST',
+                    data: JSON.stringify(form_data),
+                    contentType: 'application/json',
+                    url: api_config.protocol + api_config.domain + api_config.path + 'application',
+                })
+                    .done(async function (data, textStatus) {
+                        if (data.result_code != 2) {
+                            if (data.result_code == -9 || data.result_code == -10) {
+                                if (await Session.update()) {
+                                    success = 'Session updated'
+                                } else {
+                                    success = false;
+                                }
+                                i++;
+                            } else {
+                                success = false
+                            }
+                        } else {
+                            success = true
+                        }
+                    })
+                    .fail(function (data, textStatus) {
+                        success = false
+                    })
+                    .always(function (textStatus) {
+                        resolve()
+                    })
+            })
+        }
 
-
-        // for (let i = 0; i < 2 && !success; i++) {
-        //     await new Promise((resolve, reject) => {
-        //         $.ajax({
-        //                 type: 'POST',
-        //                 data: JSON.stringify(form_data),
-        //                 contentType: 'application/json',
-        //                 url: api_config.protocol + api_config.domain + api_config.path + 'application',
-        //             })
-        //             .done(async function(data, textStatus) {
-        //                 // console.log(textStatus)
-        //                 if (data.result_code != 2) {
-        //                     if (data.result_code == -9 || data.result_code == -10) {
-        //                         if (await Session.update()) {
-        //                             success = 'Session updated'
-        //                         } else {
-        //                             success = false;
-        //                         }
-        //                         i++;
-        //                     } else {
-        //                         success = false
-        //                     }
-        //                 } else {
-        //                     success = true
-        //                 }
-        //             })
-        //             .fail(function(data, textStatus) {
-        //                 // console.log(textStatus)s
-        //                 // console.log(data)
-        //                 success = false
-        //             })
-        //             .always(function(textStatus) {
-        //                 resolve()
-        //                     // console.log(textStatus)
-        //             })
-        //     })
-        // }
-
-        // if (!success) {
-        //     window.alert('There was a server error while processing your request. Please submit again. Aplogies for the inconvenience caused.')
-        // }
         return success;
-
-        // return form_data;
 
     }
 })

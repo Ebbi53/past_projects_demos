@@ -67,7 +67,6 @@ define(['jquery', 'underscore', 'backbone', 'jquery.iframe-transport', 'fileUplo
                     $(this).parents('.form-group').find('div.progress div.progress-bar').css('width', progress + '%');
 
                     if (progress == 100) {
-
                         // Backbone.Events.trigger('success')
                     }
                 },
@@ -76,31 +75,31 @@ define(['jquery', 'underscore', 'backbone', 'jquery.iframe-transport', 'fileUplo
                     $(this).parents('.form-group').find('div.progress div.progress-bar').css('width', 0);
 
                     $(this).parents('button').children('div').toggle();
-                    // if (data.result.result_code > 0) {
-                    $(this).parents('.form-group').children('div.uploadBtn').toggle();
-                    $(this).parents('.form-group').find('span.fileStatus i').text(data.files[0].name + ' successfully uploaded!');
-                    $(this).parents('.form-group').find('.undoBtn').removeAttr('disabled')
+                    if (data.result.result_code > 0) {
+                        $(this).parents('.form-group').children('div.uploadBtn').toggle();
+                        $(this).parents('.form-group').find('span.fileStatus i').text(data.files[0].name + ' successfully uploaded!');
+                        $(this).parents('.form-group').find('.undoBtn').removeAttr('disabled')
 
-                    uploadData[$(this).attr('name')] = data.files[0].name;
-                    if (data.paramName[0] == 'photo') {
-                        var reader = new FileReader();
+                        uploadData[$(this).attr('name')] = data.files[0].name;
+                        if (data.paramName[0] == 'photo') {
+                            var reader = new FileReader();
 
-                        reader.onload = function () {
-                            photoURL = reader.result;
-                        };
+                            reader.onload = function () {
+                                photoURL = reader.result;
+                            };
 
-                        reader.readAsDataURL(data.files[0]);
+                            reader.readAsDataURL(data.files[0]);
+                        }
+
+                    } else if (data.result.result_code == -2) {
+                        Backbone.Events.trigger('showError', 'fileType');
+
+                    } else if (data.result.result_code == -3) {
+                        Backbone.Events.trigger('showError', 'fileSize')
+                    } else if (data.result.result_code == -9 || data.result.result_code == -10) {
+                        Session.update();
+                        Backbone.Events.trigger('showError', 'fileUpload')
                     }
-
-                    // } else if (data.result.result_code == -2) {
-                    //     Backbone.Events.trigger('showError', 'fileType');
-
-                    // } else if (data.result.result_code == -3) {
-                    //     Backbone.Events.trigger('showError', 'fileSize')
-                    // } else if (data.result.result_code == -9 || data.result.result_code == -10) {
-                    //     Session.update();
-                    //     Backbone.Events.trigger('showError', 'fileUpload')
-                    // }
                 },
                 fail: function (e, data) {
                     $(this).parents('.form-group').children('div.uploadProgress').addClass('hidden');

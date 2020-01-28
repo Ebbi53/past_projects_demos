@@ -1,1 +1,1 @@
-define({protocol:"https://",domain:"app.ehrdesign.com",path:"/rest/jfapp_dev2/"});
+define({ protocol: "https://", domain: "app.ehrdesign.com", path: "/rest/jfapp_dev2/" });

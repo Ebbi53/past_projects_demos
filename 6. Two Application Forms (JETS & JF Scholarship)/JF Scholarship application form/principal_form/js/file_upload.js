@@ -49,27 +49,12 @@ define(['jquery', 'underscore', 'backbone', 'jquery.iframe-transport', 'fileUplo
                         trigger: true
                     })
                 } else if (data.result.result_code == -3) {
-                    // $('div#alertBox div#alertMsg').html('<strong>FILE UPLOAD FAILED</strong><br><hr>File size is exceeding the limit.')
-                    // $('div#alertBox').fadeIn(300)
-                    // setTimeout(function() {
-                    //     $('div#alertBox').fadeOut(300);
-                    // }, 3500)
                     Backbone.Events.trigger('showError', 'fileSize')
                 } else {
-                    // $('div#alertBox div#alertMsg').html('<strong>FILE UPLOAD FAILED</strong><br><hr>Please try again.')
-                    // $('div#alertBox').fadeIn(300)
-                    // setTimeout(function() {
-                    //     $('div#alertBox').fadeOut(300);
-                    // }, 3500)
                     Backbone.Events.trigger('showError', 'fileUpload')
                 }
             },
             fail: function (e, data) {
-                // $('div#alertBox div#alertMsg').html('<strong>UNEXPECTED SERVER ERROR</strong><br><hr>Please try again.')
-                // $('div#alertBox').fadeIn(300)
-                // setTimeout(function() {
-                //     $('div#alertBox').fadeOut(300);
-                // }, 3500)
                 Backbone.Events.trigger('showError', 'server')
             }
         });

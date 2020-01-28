@@ -39,11 +39,7 @@ footer {
     top: 20px;
     right: 50px;
     z-index: 999;
-    /* color: #CC0000 !important; */
     min-width: 20%;
-    /* background-color: #F2DEDE; */
-    /* border-color: #CC0000; */
-    /* padding: 30px; */
     display: none;
 }
 

@@ -9,14 +9,11 @@ define(['jquery', 'underscore', 'backbone', 'file_upload', "core-js/modules/es6.
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                hasDeclared = true; // var validFields = [];
+                hasDeclared = true;
 
                 highlightField = function highlightField(highlight, tag) {
                   if (highlight) {
-                    // if ($(tag).parents('.form-group').find('label').length > 1) {
-                    // }
                     if ($("label[for=".concat($(tag).attr('id'), "]")).length == 0) {
-                      // $(`label[for=${$(tag).attr('class')}]`).addClass('incomplete-label');
                       $(tag).parents('.form-group').find('label').addClass('incomplete-label');
                     } else {
                       $("label[for=".concat($(tag).attr('id'), "]")).addClass('incomplete-label');
@@ -27,16 +24,12 @@ define(['jquery', 'underscore', 'backbone', 'file_upload', "core-js/modules/es6.
                     $(tag).is('select') && $(tag).attr('class').includes('select2') ? $("#select2-".concat($(tag).attr('id'), "-container")).parent().removeClass('incomplete-input') : $(tag).removeClass('incomplete-input');
 
                     if ($("label[for=".concat($(tag).attr('id'), "]")).length == 0 && !$(tag).parents('.form-group').find('input').hasClass('incomplete-input')) {
-                      // $(`label[for=${$(tag).attr('class')}]`).removeClass('incomplete-label');
                       $(tag).parents('.form-group').find('label').removeClass('incomplete-label');
                     } else {
                       $("label[for=".concat($(tag).attr('id'), "]")).removeClass('incomplete-label');
                     }
                   }
-                }; // var isValid = true;
-                // if ($.trim($('.compulsory').val()) === '') valid = false;
-                // else valid = true;
-
+                };
 
                 _context.next = 4;
                 return new Promise(function (resolve, reject) {
@@ -49,38 +42,24 @@ define(['jquery', 'underscore', 'backbone', 'file_upload', "core-js/modules/es6.
                     $('.compulsory').each(function (index) {
                       if ($(this).is('label')) {
                         if ($("input[name=".concat($(this).attr('for'), "]:checked")).length == 0) {
-                          // validFields.push(false);
-                          // isValid = false;
                           $(this).parents('.form-group').find('label').addClass('incomplete-label');
                         } else {
-                          // validFields.push(true)
                           $(this).parents('.form-group').find('label').removeClass('incomplete-label');
                         }
                       } else {
                         if ($(this).attr('type') == 'file') {
                           if (fileUpload.uploadData[$(this).attr('name')] == '') {
-                            // validFields.push(false);
-                            // isValid = false;
                             highlightField(true, this);
                           } else {
-                            highlightField(false, this); // validFields.push(true);
+                            highlightField(false, this);
                           }
                         } else {
                           if ($(this).val() == '' || $(this).val() == '--') {
-                            // validFields.push(false);
-                            // isValid = false;
                             highlightField(true, this);
                           } else {
                             !$(this).hasClass('invalid') ? highlightField(false, this) : ''; // validFields.push(true);
                           }
-                        } // if (!validFields[index]) {
-                        //     $(`label[for=${$(this).attr('id')}]`).addClass('incomplete-label');
-                        //     ($(this).is('select') && $(this).attr('class').includes('select2')) ? $(`#select2-${$(this).attr('id')}-container`).parent().addClass('incomplete-input') : $(this).addClass('incomplete-input');
-                        // } else {
-                        //     $(`label[for=${$(this).attr('id')}]`).removeClass('incomplete-label');
-                        //     ($(this).is('select') && $(this).attr('class').includes('select2')) ? $(`#select2-${$(this).attr('id')}-container`).parent().removeClass('incomplete-input') : $(this).removeClass('incomplete-input');
-                        // }
-
+                        }
                       }
 
                       if (index == $('.compulsory').length - 1) {
@@ -119,10 +98,6 @@ define(['jquery', 'underscore', 'backbone', 'file_upload', "core-js/modules/es6.
                 });
 
               case 6:
-                // return _context.abrupt("return", {
-                //   success: true,
-                //   hasDeclared: true
-                // });
                 return _context.abrupt("return", {
                   success: $('[class*=incomplete]').length == 0,
                   hasDeclared: hasDeclared

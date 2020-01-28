@@ -164,11 +164,7 @@ define(['jquery', 'underscore', 'backbone', 'text!template/form.html', 'file_upl
                                             });
                                         } else {
                                             Backbone.Events.trigger('showError', validationResults.hasDeclared ? 'validation' : 'declaration');
-                                            validationResults.hasDeclared ? $(window).scrollTop($($('.sections').has('[class*=incomplete]')[0]).offset().top - (window.innerWidth <= 991 ? $('nav.navbar').outerHeight() : 0)) : null; // $('div.alert div#errorMsg').html('<strong>FORM VALIDATION FAILED</strong><br><hr>Few compulsory fields are incomplete. Please review your form')
-                                            // $('div.alert').fadeIn(300);
-                                            // setTimeout(() => {
-                                            //     $('div.alert').fadeOut(300);
-                                            // }, 4000);
+                                            validationResults.hasDeclared ? $(window).scrollTop($($('.sections').has('[class*=incomplete]')[0]).offset().top - (window.innerWidth <= 991 ? $('nav.navbar').outerHeight() : 0)) : null;
                                         }
 
                                     case 4:
@@ -189,23 +185,7 @@ define(['jquery', 'underscore', 'backbone', 'text!template/form.html', 'file_upl
                 e.preventDefault();
                 $(window).scrollTop($($(e.currentTarget).attr('href')).offset().top);
             },
-            // 'click div.alert span.closebtn': function (e) {
-            //     $(e.currentTarget).parents('div.alert').fadeOut(300);
-            //     $('div[class*=container] div.row').css('opacity', 1);
-            //     // $(window).scrollTop($('#uploaded_files').offset().top - $('div.alert').height() - 20);
-            //     if ($('div.alert div#errorMsg').html().includes('TIMEOUT')) {
-            //         if ($('#body').find('#preview').length) {
-            //             Router.navigate('applicationForm', {
-            //                 trigger: false
-            //             })
-            //         }
-            //         $(window).scrollTop($('#uploaded_files').offset().top - (window.innerWidth <= 991 ? $('nav.navbar').outerHeight() : 0));
-            //         $('.undoBtn').not(':disabled').trigger('click');
-            //     }
-            //     // $(window).scrollTop($($(e.currentTarget).attr('href')).offset().top);
-            // },
             'click div.calicon, div.calLabel': function clickDivCaliconDivCalLabel(e) {
-                // console.log($(e.currentTarget).siblings('input.datepicker'))
                 $(e.currentTarget).siblings('input.datepicker').datepicker('show');
             },
             'click div.uploadProgress div.cancelUpload': function clickDivUploadProgressDivCancelUpload(e) {
@@ -336,9 +316,9 @@ define(['jquery', 'underscore', 'backbone', 'text!template/form.html', 'file_upl
                     temp += qual == 'Singapore - Cambridge GCE Advanced Level' ? "<div class = 'col-md-3'>\n                        <p class = 'text-center'><b>H".concat(i + 1, "</b></p>\n                    </div>") : '';
 
                     for (var j = 0; j < loopData[qual].grades.length; j++) {
-                        if(i < 2){
+                        if (i < 2) {
                             temp += "<div class = 'col-md-3'>\n                        <p class = 'text-center'>".concat(String.fromCharCode(65 + j), "</p>\n                        <input type = 'number' class = 'form-control-sm grades' name=").concat(loopData[qual].name, " value=0 min=0 max=20>\n                        </div>");
-                        }else{
+                        } else {
                             temp += "<div class = 'col-md-3'>\n                        <p class = 'text-center'>".concat(loopData[qual].grades[j], "</p>\n                        <input type = 'number' class = 'form-control-sm grades' name=").concat(loopData[qual].name, " value=0 min=0 max=20>\n                        </div>");
                         }
                     }
@@ -420,7 +400,6 @@ define(['jquery', 'underscore', 'backbone', 'text!template/form.html', 'file_upl
                     false || !!document.documentMode;
 
                 if (isIE) {
-                    // $('select').css('background', 'transparent');
                     $('input[type=file]').click(function (e) {
                         e.stopPropagation();
                     });

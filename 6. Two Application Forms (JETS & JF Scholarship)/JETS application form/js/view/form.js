@@ -38,7 +38,6 @@ define(['jquery', 'underscore', 'backbone', 'text!template/form.html', 'file_upl
             },
 
             'click .section_heading': function (e) {
-                // console.log(e.currentTarget.children[0].children)
                 $(e.currentTarget.nextElementSibling).slideToggle(300);
                 $(e.currentTarget.children[0].children).toggleClass('hidden');
             },

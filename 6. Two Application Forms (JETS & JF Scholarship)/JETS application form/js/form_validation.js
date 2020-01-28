@@ -23,7 +23,6 @@ define(['jquery', 'file_upload'], function ($, fileupload) {
                 }
             }
         };
-        // var isValid = true;
 
         await new Promise((resolve, reject) => {
             if ($('input[name=accept_declaration]:checked').val() != 'Yes') {

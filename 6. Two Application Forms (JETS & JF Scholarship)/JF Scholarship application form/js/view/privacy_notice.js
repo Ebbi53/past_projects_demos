@@ -14,10 +14,6 @@ define(['jquery', 'underscore', 'backbone', 'text!template/privacy_notice.html',
                     trigger: true
                 })
             },
-            // 'click div.alert span.closebtn': function (e) {
-            //     $(e.currentTarget).parents('div.alert').fadeOut(300);
-            //     $('div[class*=container] div.row').css('opacity', 1);
-            // },
         },
 
         render: function () {

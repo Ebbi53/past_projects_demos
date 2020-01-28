@@ -67,7 +67,6 @@ define(['jquery', 'underscore', 'backbone', 'jquery.iframe-transport', 'jquery.u
                     }
                 },
                 done: function (e, data) {
-                    console.log(data.result);
                     $(this).parents('.form-group').children('div.uploadProgress').addClass('hidden');
                     $(this).parents('.form-group').find('div.progress div.progress-bar').css('width', 0);
 
