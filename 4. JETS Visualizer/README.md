@@ -1,6 +1,6 @@
 # Jardine Executive Training Scheme (JETS) applications' data visualizer
 
-**Project Description:** This portal allows to visualize and analyse the data collected during the 5 rounds of JETS recruitment. The data is visualized in 4 different formats namely **Row charts, Funnel chart, Table,** and **Stacked Bar chart**. And **cross-filtering** is provided amongst all these charts based on **3 dimensions** in the data (Universities, Promotional Channels, and Assessment Centers).
+**Project Description:** This portal allows to visualize and analyse the data collected during the 5 rounds of JETS recruitment. The data is visualized in 4 different formats namely **Row charts, Funnel chart, Table,** and **Stacked Bar chart**. And **cross-filtering** is provided amongst all these charts based on **3 dimensions** in the data (Universities, Promotional Channels, and Assessment Centers). Did **[End-to-End Development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and devoted approximately 2.5 months to this project.
 
 **My responsibilty:**
 * **Project Manager**; collecting user requirements, tasks allocation, progress updates. Supervsied **POC** (Proof Of Concept) and UAT (User Acceptance Testing) stages.
