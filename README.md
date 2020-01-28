@@ -1,4 +1,4 @@
-# Welcome to my Portfolio
+# Welcome!
 
 I have tried to include almost all the projects I have worked on whether as a part of my internship or independently.
 
