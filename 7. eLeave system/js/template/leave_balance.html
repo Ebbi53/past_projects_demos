@@ -1,0 +1,55 @@
+<h1 class="page-title">Leave balance</h1>
+
+
+<% if (progress != null && progress < 100) {%>
+<div class="bar"></div>
+<% } else { %>
+<table class="table table-bordered fadeIn table-responsive">
+    <thead>
+        <th style="background-color: #fffafa" colspan="2">Info</th>
+    </thead>
+    <tbody>
+        <tr>
+            <th>User</th>
+            <td><%- employeeName %> (<%- userEmail %>)</td>
+        </tr>
+        <% if(typeof endorserEmail !=='undefined' && endorserEmail!==''){%>
+        <tr>
+            <th>Endorser</th>
+            <td><%- endorserEmail %></td>
+        </tr>
+        <% }%>
+        <tr>
+            <th>Approver</th>
+            <td><%- approverEmail %></td>
+        </tr>
+
+    </tbody>
+</table>
+
+<table class="table table-striped table-bordered fadeIn table-hover table-responsive">
+    <tbody>
+        <tr>
+            <th>Annual leave balance</th>
+            <td><%- annualLeaveBalance %></td>
+        </tr>
+        <tr>
+            <th>Annual leave entitlement</th>
+            <td><%- annualLeaveEntitlementCurrentYear %></td>
+        </tr>
+        <tr>
+            <th>Annual leave applied (year-to-date)</th>
+            <td><%- annualLeaveTakenYTD %></td>
+        </tr>
+        <tr>
+            <th>Other leave applied (year-to-date)</th>
+            <td><%- otherLeaveTakenYTD %></td>
+        </tr>
+        <tr>
+            <th>Sick leave taken (year-to-date)</th>
+            <td><%- sickLeaveTakenYTD %></td>
+        </tr>
+
+    </tbody>
+</table>
+<% } %>

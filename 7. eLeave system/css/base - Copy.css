@@ -1,0 +1,211 @@
+#header #msgContainer{
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    left: auto;
+}
+
+.alert{
+    display:none;
+    margin: 5px;
+    z-index: 9999;
+}
+.btn{
+    white-space: normal !important;
+}
+
+
+#body{
+    padding-top:55px;
+
+}
+body {
+    margin-bottom: 45px;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+.no-border{
+    border:none !important;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 41px;
+    background-color: #efefef;
+
+}
+#footerView{
+    background-color: #efefef;
+}
+.ftContain{
+    background-color: #efefef;
+}
+/*  main container view */
+.mainContainerView{
+    /*position:relative;*/
+    padding-bottom: 50px;
+
+}
+
+.mainContainerView a.content{
+    display: block;
+    text-align:left;
+    text-decoration: none;
+    border-bottom: solid 1px #ccc;
+    padding: 10px 10px 5px 10px;
+    color: #555;
+    margin-bottom: 10px;
+
+}
+
+.mainContainerView a.content *{
+    color: #555;
+    /*padding: 0;*/
+    margin: 0;
+}
+
+.mainContainerView a.content .content-title{
+    font-weight: bolder;
+    font-size: 20px;
+    display:block;
+}
+
+
+.mainContainerView a.content:hover,
+.mainContainerView a.content.active{
+    background-color: #428bca;
+
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.mainContainerView a.content:hover,
+.mainContainerView a.content.active,
+.mainContainerView a.content:hover *,
+.mainContainerView a.content.active *{
+    color: white;
+}
+
+/*  leave application view   */
+.leaveApplicationView [public_holiday].day,
+.leaveApplicationView .holiday{
+    color: red;
+}
+
+.leaveApplicationView .day.applied{
+    color: orange;
+    background-color: #fdfd5e80;
+}
+
+.leaveApplicationView .day.selected,
+.leaveApplicationView .day.selected.applied{
+    color: white;
+    background-color: orange;
+}
+
+
+.leaveApplicationView .day.btn-primary{
+    background-color: #428bca !important;
+}
+
+.leaveApplicationView .extraRow{
+    border-bottom: solid 1px #3276b1;
+    border-top: solid 2px #3276b1;
+    background-color: #f2f2f2;
+}
+
+.leaveApplicationView [tab_content]{
+    overflow: auto;
+}
+
+/*  leaveApplicationDialogView  */
+.leaveApplicationDialogView{
+    padding: 5px 0;
+    overflow: auto;
+}
+.clickable:hover{
+    cursor:pointer;
+}
+.leaveApplicationDialogView+.leaveApplicationDialogView{
+    border-top: solid 1px #ccc;
+}
+
+
+/*FAB*/
+.zoom {
+    position: fixed;
+    bottom: 45px;
+    right: 24px;
+    height: 70px;
+}
+
+.zoom-fab {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #009688;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s ease-out;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: #FFF;
+}
+
+.zoom-fab:hover {
+    background-color: #4db6ac;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-btn-large {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.icon-menu {
+    text-align: center;
+    font-size: 40px;
+
+}
+
+@media (min-width: 768px){
+    .mainContainerView a.content{
+        min-height: 265px;
+        margin:0 32px;
+    }
+    .icon-menu {
+        display: block;
+        text-align: center;
+        font-size: 50px;
+        padding: 50px;
+    }
+
+    .hello-menu a{
+
+    }
+}
+@media (max-width: 460px){
+
+    .icon-container {
+        width: 100%;
+        text-align: center;
+    }
+    .content-container {
+        width: 100%;
+
+    }
+}
+
+.event.custom-event{
+  height: 15px;
+  font-size: 13px;
+}

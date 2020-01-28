@@ -1,0 +1,119 @@
+<h1 class="text-center">eLeave</h1>
+<div class="row clickable togglerChart ">
+    <div class="col-xs-12  col-sm-8 col-sm-offset-2">
+        <div id="highcharter" style=" height: 60vh; min-height:400px; margin: 0 auto"></div>
+        <div class="row">
+            <a href="#leave_application" class="btn btn-success  col-xs-12 col-md-6 col-md-offset-3">Apply for leave</a>
+        </div>
+        <h2 class="text-center">Coming leave</h2>
+        <div class="table-responsive fadeIn ">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Session</th>
+                        <th>Type</th>
+                        <th>Approval Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <%
+            for (var i = 0; i < date.length; i ++) {
+                if(new Date(date[i])>Date.now()){
+             if(date[i] === date[i+1] &&type[i] === type[i+1] && approvalAction[i] === approvalAction[i+1] && approvalAction[i] !=='rejected'){//same day %>
+                    <tr>
+                        <td><%- displayDate[i] %></td>
+                        <td>full day</td>
+                        <td><%- type[i] %></td>
+                        <td><%- approvalAction[i] %></td>
+
+                    </tr>
+                    <%      i++;
+            } else{%>
+
+                    <tr>
+                        <td><%- displayDate[i] %></td>
+                        <td><%- session[i] %></td>
+                        <td><%- type[i] %></td>
+                        <td><%- approvalAction[i] %></td>
+
+                    </tr>
+                    <%} }
+            } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="hello-menu togglerMenu hidden">
+    <a href="#leave_application" class="content fadeIn flyUp col-xs-12 col-sm-4 col-md-3 ">
+        <div class="col-xs-2 col-sm-12 icon-container"> <i class="	icon-menu glyphicon glyphicon-calendar"></i></div>
+        <div class="col-xs-10 col-sm-12 content-container"> <span class="content-title">Apply for leave</span>
+            <p>Apply leave</p>
+        </div>
+    </a>
+
+    <a href="#leave_balance" class="content fadeIn flyUp col-xs-12 col-sm-4 col-md-3 ">
+        <div class="col-xs-2  col-sm-12 icon-container"><i class="	icon-menu glyphicon glyphicon-tasks"></i></div>
+        <div class="col-xs-10 col-sm-12 content-container"> <span class="content-title">Leave balance</span>
+            <p>View your balance</p>
+        </div>
+    </a>
+    <% if(isManager){ %>
+    <a href="#team_leave_balance" class="content fadeIn flyUp col-xs-12 col-sm-4 col-md-3 ">
+        <div class="col-xs-2  col-sm-12 icon-container"><i class="	icon-menu ic-sm glyphicon glyphicon-folder-open"></i>
+        </div>
+        <div class="col-xs-10 col-sm-12 content-container"> <span class="content-title">Team Leave balance</span>
+            <p>View your team's leave balance</p>
+        </div>
+    </a>
+    <% } %>
+    <a href="#leave_history" class="content fadeIn flyUp col-xs-12 col-sm-4 col-md-3 ">
+        <div class="col-xs-2  col-sm-12 icon-container"> <i class="	icon-menu glyphicon glyphicon-list-alt"></i></div>
+        <div class="col-xs-10 col-sm-12 content-container"> <span class="content-title">Leave history</span>
+            <p>View your history</p>
+        </div>
+    </a>
+    <% if(runtime.isEndorser){ %>
+
+    <a href="#leave_application_endorsement" class="content fadeIn flyUp col-xs-12  col-sm-4 col-md-3 ">
+        <div class="col-xs-2  col-sm-12 icon-container">
+            <i class="	icon-menu glyphicon glyphicon-briefcase"></i></div><span class="badge float-right "
+            style="background-color:#1253AF; font-size:20px;position: absolute;top:0px;right: 8px;color:#fff;"><% if(typeof runtime.pending_endorsement_cnt !== 'undefined'){ %><%- runtime.pending_endorsement_cnt%>
+            <% }%></span>
+        <div class="col-xs-10 col-sm-12 content-container"> <span class="content-title">Leave application
+                endorsement</span>
+            <p></p>
+        </div>
+    </a>
+    <% } %>
+    <% if(isManager){ %>
+    <a href="#leave_application_approval" class="content fadeIn flyUp col-xs-12  col-sm-4 col-md-3 ">
+        <div class="col-xs-2  col-sm-12 icon-container">
+            <i class="	icon-menu glyphicon  glyphicon-edit"></i></div><span class="badge float-right "
+            style="background-color:#AF0304; font-size:20px;position: absolute;top:0px;right: 8px;color:#fff;"><% if(typeof runtime.pending_approval_cnt !== 'undefined'){ %><%- runtime.pending_approval_cnt%>
+            <% }%></span>
+        <div class="col-xs-10 col-sm-12 content-container"><span class="content-title">Leave application approval</span>
+            <p>Approve leave applications</p>
+        </div>
+    </a>
+
+    <a href="#team_leave_history" class="content fadeIn flyUp col-xs-12 col-sm-4 col-md-3 ">
+        <div class="col-xs-2  col-sm-12 icon-container"> <i class="	icon-menu glyphicon  glyphicon-paperclip"></i></div>
+        <div class="col-xs-10 col-sm-12 content-container"> <span class="content-title">Team leave history</span>
+            <p>list team leave history</p>
+        </div>
+    </a>
+    <% } %>
+
+
+    <a href="#user" class="content fadeIn flyUp col-xs-12 col-sm-4  col-md-3">
+        <div class="col-xs-2  col-sm-12 icon-container"> <i
+                class="	icon-menu glyphicon glyphicon  glyphicon-wrench"></i></div>
+        <div class="col-xs-10 col-sm-12 content-container"> <span class="content-title">User info</span>
+            <p>New Password</p>
+        </div>
+    </a>
+</div>

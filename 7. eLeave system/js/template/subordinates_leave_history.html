@@ -1,0 +1,55 @@
+<h1 class="page-title">Subordinates leave history</h1>
+
+
+<% if (progress != null && progress < 100) {%>
+<div class="bar"></div>
+<% } else { %>
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <select sle_user_id class="form-control">
+            <option value=''>All</option>
+            <% _.each(userIdArr, function(userId){ %>
+            <option value="<%- userId %>" <%- (chosenId == userId? 'selected="selected"':'') %>><%- userId %></option>
+            <% }); %>
+        </select>
+    </div>
+</div>
+<div class="table-responsive fadeIn">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Date (dd/mm/yyyy)</th>
+                <th>Session</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i =0;i < collection.length;i++){%>
+            <tr>
+
+                <%if(collection.models[i+1]&&
+            collection.models[i].get('session') !== collection.models[i+1].get('session') &&
+            collection.models[i].get('id_user') === collection.models[i+1].get('id_user') &&
+            collection.models[i].get('date') === collection.models[i+1].get('date') &&
+            collection.models[i].get('type') === collection.models[i+1].get('type')){
+            %>
+                <td><%- collection.models[i].get('id_user') %></td>
+                <td><%- collection.models[i].get('displayDate') %></td>
+                <td>full day</td>
+                <td><%- collection.models[i].get('type') %></td>
+                <% i++; }else{ %>
+                <td><%- collection.models[i].get('id_user') %></td>
+                <td><%- collection.models[i].get('displayDate') %></td>
+                <td><%- collection.models[i].get('session') %></td>
+                <td><%- collection.models[i].get('type') %></td>
+            </tr>
+            <%  }%>
+
+            <%} %>
+
+
+        </tbody>
+    </table>
+</div>
+<% } %>

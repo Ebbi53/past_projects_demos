@@ -1,0 +1,33 @@
+<label class="control-lable"><%- name %></label>
+
+<% if (isSearch){ %>
+<div class="input-group">
+    <div class="input-group-btn">
+        <select class="btn btn-default dropdown-toggle" search_type>
+            <option value="">IN</option>
+            <option value="LIKE">LIKE</option>
+            <option value="=">=</option>
+            <option value=">">></option>
+            <option value="<"><</option>
+            <option value="<="><=</option>
+            <option value=">=">>=</option>
+        </select>
+    </div>
+<% } %>
+
+
+
+    <% if (type == 'text') { %>
+        <input type="text" name="<%- id %>" value="<%- value %>" class="form-control" control>
+    <% } else if (type == 'date') { %>
+        <input type="date" name="<%- id %>" value="<%- value %>" class="form-control" control>
+    <% } else if (type == 'select') { %>
+        <select name="<%- id %>" class="form-control" control>
+        </select>
+    <% } %>
+    
+    
+    
+<% if (isSearch){ %>
+</div>
+<% } %>

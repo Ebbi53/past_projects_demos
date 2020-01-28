@@ -1,0 +1,38 @@
+<h1 class="page-title">Team leave balance</h1>
+
+
+<% if (progress != null && progress < 100) {%>
+<div class="bar"></div>
+<% } else { %>
+
+<table style="margin-bottom: 50px" id="teamBalance" class="fadeIn no-wrap display dataTable table-hover">
+	<thead>
+		<tr style="background-color: #fffafa">
+			<th>Teammate</th>
+			<th>Leave Entitlement</th>
+			<th>Annual Leave Balance B/F</th>
+			<th>Leave Booked (year-to-date)</th>
+			<th>Leave balance</th>
+			<th>Sick Leave (year-to-date)</th>
+			<th>Other Leave (year-to-date)</th>
+			<th>No Pay Leave (year-to-date)</th>
+			<th>More Information</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%for (var i = 0; i < Subordinate.length; i++){ %>
+		<tr>
+			<td><%- Subordinate[i] %></td>
+			<td><%- LeaveEntitlement[i] == '' ? 0 : LeaveEntitlement[i] %></td>
+			<td><%- AnnualLeaveBalanceBF[i] == '' ? 0 : AnnualLeaveBalanceBF[i] %></td>
+			<td><%- LeaveBookedYTD[i] == '' ? 0 : LeaveBookedYTD[i] %></td>
+			<td><%- LeaveBalance[i] %></td>
+			<td><%- SickLeaveYTD[i] == '' ? 0 : SickLeaveYTD[i] %></td>
+			<td><%- OtherLeaveYTD[i] == '' ? 0 : OtherLeaveYTD[i] %></td>
+			<td><%- NoPayLeaveYTD[i] == '' ? 0 : NoPayLeaveYTD[i] %></td>
+			<td></td>
+		</tr>
+		<% } %>
+	</tbody>
+</table>
+<% } %>

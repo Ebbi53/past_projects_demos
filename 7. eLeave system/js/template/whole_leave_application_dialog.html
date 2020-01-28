@@ -1,0 +1,74 @@
+<!--This is deprecated in 20/9/2017 to fulfill BL change-->
+<!--inherited by whole_leave_application_dialog-->
+<div class="col-xs-12 col-md-3 col-md-offset-1">
+    <div><%- displayDate %></div>
+    <div><%- modelJSON.type %></div>
+</div>
+<div class="col-xs-12 col-md-8">
+    <div class="row" >
+        <div class="col-xs-8 col-md-8 col-xs-offset-2">
+            <% if (_applicationActionAM == applicationActionType.DESELECT && _applicationActionPM == applicationActionType.DESELECT) { %>
+            <div class="btn-block btn btn-warning" section="whole" btn_action="<%- applicationActionType.DESELECT %>">
+                ⬤ Deselect full day
+            </div>
+
+                <% }else if(_applicationActionAM == applicationActionType.APPLIED ||_applicationActionPM == applicationActionType.APPLIED){} else { %>
+            <div class=" btn-block btn btn-primary "section="whole"  btn_action="<%- applicationActionType.SELECT %>">
+                ⬤   Select full day
+            </div>
+            <% }  %>
+        </div>
+    </div>
+    <div style="margin:5px"></div>
+    <div class="row" >
+        <div class="col-xs-6 col-md-6">
+            <% if (_applicationActionAM == applicationActionType.SELECT) { %>
+                <div class=" btn btn-block btn-primary" section="AM" btn_action="<%- _applicationActionAM %>">
+                    <i class="glyphicon glyphicon-circle-arrow-up"></i>  <%- _applicationActionAM %> AM
+                </div>
+            <% } else if (_applicationActionAM == applicationActionType.DESELECT) { %>
+                <div class=" btn btn-block btn-warning" section="AM" btn_action="<%- _applicationActionAM %>">
+                    <i class="glyphicon glyphicon-circle-arrow-up"></i>  <%- _applicationActionAM %> AM
+                </div>
+            <% }  else if (_applicationActionAM == applicationActionType.APPLIED) { %>
+                <div class="">
+                    Applied <%- _applicationTypeAM %> leave on am
+                </div>
+            <div class=""><% if (approvalActionAM) { %>(<%- approvalActionAM %>)<% } %></div>
+            <% } %>
+        </div>
+
+        <div class="col-xs-6 col-md-6">
+            <% if (_applicationActionPM == applicationActionType.SELECT) { %>
+            <div class="btn btn-block btn-primary" section="PM" btn_action="<%- _applicationActionPM %>">
+                <i class="glyphicon glyphicon-circle-arrow-down"></i> <%- _applicationActionPM %> PM
+            </div>
+            <% } else if (_applicationActionPM == applicationActionType.DESELECT) { %>
+            <div class="btn btn-block btn-warning" section="PM" btn_action="<%- _applicationActionPM %>">
+               <div><i class="glyphicon glyphicon-circle-arrow-down"></i> <%- _applicationActionPM %> PM</div>
+            </div>
+            <% }  else if (_applicationActionPM == applicationActionType.APPLIED) { %>
+            <div class="">
+                Applied <%- _applicationTypePM %> leave on pm
+            </div>
+            <div class=""><% if (approvalActionPM) { %>(<%- approvalActionPM %>)<% } %></div>
+            <% } %>
+        </div>
+
+    </div>
+    <div style="margin:5px"></div>
+    <div class="row" >
+        <div class="col-xs-8 col-md-8 col-xs-offset-2 remove_on_selected">
+            <% if (!startedLongLeave) { %>
+            <div class="btn btn-block btn-primary applicationActionPeriod " >
+                <i class="glyphicon glyphicon-circle-arrow-right"></i> Start
+            </div>
+            <% } else  { %>
+            <div class="btn btn-block btn-warning applicationActionPeriod ">
+                <i class="glyphicon glyphicon-circle-arrow-right"></i>  End
+            </div>
+            <% } %>
+
+        </div>
+    </div>
+</div>

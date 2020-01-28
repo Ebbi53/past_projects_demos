@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>One time token activation</h3>
+Do you want to activate this token? (<%- tisToken %>)
+<br/>A token can be activated one time only.<br/>
+Token will be expired if it is not activated within 15 minutes, you may request another token on the login page.<br/>
+<div class="btn btn-success imok">Activate</div>
+<div class="btn btn-danger" onclick='  window.location.href="about:blank"; window.close();' >Not now</div>
+</body>
+</html>

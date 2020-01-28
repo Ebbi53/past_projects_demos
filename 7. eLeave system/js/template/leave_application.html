@@ -1,0 +1,70 @@
+<div class="loader">
+    <div class="loading">
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+    </div>
+</div>
+
+<h1 class="page-title">Leave application</h1>
+<% if (progress != null && progress < 100) {%>
+<div class="bar"></div>
+<% } else { %>
+
+<div class="row fadeIn">
+    <div id="leave_bal" class="col-sm-4">
+        <div>Status</div>
+        <ul>
+
+            <li id="alb">Leave balance: </li>
+            <li id="ale">Leave entitlement: </li>
+            <li>Leave Date(s) picked: <span id="days_count"> </span></li>
+        </ul>
+    </div>
+    <div class="col-sm-8">
+
+        <div>Indicator: (yellow = leave applied)</div>
+        <div class="color_ind_filler"></div>
+
+    </div>
+</div>
+<div class="btn-group col-sm-12 form-group type_r fadeIn" data-toggle="buttons">
+    <label class="btn btn-default btn-danger" rbtn_type>
+        <input type="radio" name="type" value="annual"> Annual
+    </label>
+    <label class="btn btn-default btn-danger" rbtn_type>
+        <input type="radio" name="type" value="sick"> Sick
+    </label>
+    <label class="btn btn-default btn-danger" rbtn_type>
+        <input type="radio" name="type" value="other"> Other
+    </label>
+    <label class="btn btn-default btn-danger" rbtn_type>
+        <input type="radio" name="type" value="no pay"> No pay
+    </label>
+</div>
+<div class="clearfix">
+    <div class="form-group col-sm-6" id="remarkContainer" style="display: none">
+        <label for="remark">Remark</label>
+        <textarea id="remark" class="form-control"></textarea>
+    </div>
+</div>
+<hr />
+<div id="detail" class="fadeIn" style="display: none">
+    <ul class="nav nav-tabs">
+        <li class="active" btn_tab="[datepicker]"><a href="javascript:void(0)">Calendar</a></li>
+        <li btn_tab="[selected_list]"><a href="javascript:void(0)">Selected</a></li>
+    </ul>
+    <div class="row" tab_content>
+        <div datepicker class="col-md-10 col-md-offset-1"></div>
+        <div selected_list style="display: none"></div>
+
+    </div>
+    <br />
+    <div class="clear-fix">
+        <a href="javascript:void(0)" class="btn btn-primary" btn_apply_leave>Proceed</a>
+
+        <a href="javascript:void(0)" class="btn btn-default" btn_deselect_all_leave>Cancel</a>
+    </div>
+</div>
+<% } %>

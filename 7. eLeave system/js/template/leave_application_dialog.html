@@ -1,0 +1,23 @@
+<!--This is deprecated in 20/9/2017 to fulfill BL change-->
+<!--inherited by whole_leave_application_dialog-->
+<div class="col-xs-8 col-md-6 col-md-offset-1">
+    <div><%- displayDate %> - <%- session %></div>
+    <div><%- type %></div>
+</div>
+<% if (_applicationAction == applicationAction.SELECT) { %>
+    <div class="col-xs-4 col-md-3 btn btn-primary" btn_action="<%- _applicationAction %>">
+        <%- _applicationAction %>
+    </div>
+<% } else if (_applicationAction == applicationAction.DESELECT) { %>    
+    <div class="col-xs-4 col-md-3 btn btn-warning" btn_action="<%- _applicationAction %>">
+        <%- _applicationAction %>
+    </div>
+<% } else { %>
+    <div class="col-xs-4 col-md-3">
+        applied
+    </div>
+<% } %>
+<% if (approvalAction) { %>
+    <div class="col-xs-12">(<%- approvalAction %>)</div>
+<% } %>
+

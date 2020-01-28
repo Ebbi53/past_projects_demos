@@ -1,0 +1,32 @@
+.draggable{
+
+}
+
+.draggable.dragging{
+    -moz-box-shadow: 0 0 5px 0 #ccc;
+    -webkit-box-shadow: 0 0 5px 0 #ccc;
+    box-shadow: 0 0 5px 0 #ccc;
+}
+
+
+.resizable .resizeBtn{
+    display:block;
+    height: 30px;
+    width:30px;
+    position:absolute;
+    bottom:-1px;
+    right:-1px;
+    border: solid 1px #ccc;
+    background: #fff;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.resizable textarea{
+    resize: none;
+}
+
+
+.multipleSelectable.selected{
+    box-shadow: 0 0 3px 0 #888;
+}

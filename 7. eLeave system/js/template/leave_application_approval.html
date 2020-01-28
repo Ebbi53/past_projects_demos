@@ -1,0 +1,172 @@
+<h1 class="page-title">Leave application approval</h1>
+
+
+<% if (progress != null && progress < 100) {%>
+    <div class="bar"></div>
+<% } else if (Object.keys(collection).length > 0) { %>
+<% for (var i = 0; i < Object.keys(collection).length; i ++) {
+collection[i]['displayDate']  = [];
+%>
+<div class="panel panel-default fadeIn">
+    <div class="panel-heading">
+        Application info
+    </div>
+    <div class="  table-responsive">
+        <table class="table  ">
+            <tbody>
+            <tr>
+                <th>User</th>
+                <td  style="border-right: 1px solid #ddd;"><%- collection[i].user %></td>
+            </tr>
+            <% if(typeof collection[i].endorserList !=='undefined' && collection[i].endorserList.trim() !== ''){ %>
+            <tr>
+                <th >Endorser</th>
+                <td style="border-right: 1px solid #ddd;"><%- collection[i].endorserList %></td>
+            </tr>
+            <% }%>
+            <tr>
+                <th >Approver</th>
+                <td style="border-right: 1px solid #ddd;"><%- collection[i].approver %></td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td  style="border-right: 1px solid #ddd;"><%- collection[i].approvalAction %></td>
+            </tr>
+            <tr>
+            <th class="visible-sm visible-md visible-lg">
+                Teammate(s) taken same date(s) off
+            </th>
+            <td class="visible-sm visible-md visible-lg" style="line-height: 1.8; border-right: 1px solid #ddd;"> <%var df = collection[i].teammatesTakenSameDatesOff;console.log(df);%>
+                <% var kd = df.trim().substring(df.indexOf("\n") + 1).replace(/(?:\r\n|\r|\n)/g, '<br/>') %> <!-- .replace(/\(/g,'<span class="label label-info">').replace(/\)/g,'</span>');-->
+                <%= kd %>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table visible-xs ">
+            <tr>
+            <td colspan="2">
+                <span style="font-weight: bold">Teammate(s) taken same date(s) off:</span><div style="line-height: 1.8;"><%var df = collection[i].teammatesTakenSameDatesOff;console.log(df);%>
+                <% var kd = df.trim().substring(df.indexOf("\n") + 1).replace(/(?:\r\n|\r|\n)/g, '<br/>') %>
+                <%= kd %>
+            </div>
+            </td>
+
+            </tr>
+        </table>
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Date (dd/mm/yyyy)</th>
+                <th>Session</th>
+                <th>Type</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (var j = 0; j < collection[i].date.length; j ++) {
+
+            collection[i].displayDate[j] = moment(collection[i].date[j],'MM/DD/YYYY').format('DD/MM/YYYY');
+            if(collection[i].date[j+1] &&
+            collection[i].session[j] !== collection[i].session[j+1]&&
+            collection[i].date[j] ===collection[i].date[j+1]&&
+            collection[i].type[j] ===collection[i].type[j+1]) {%>
+            <tr>
+                <td><%- collection[i].displayDate[j] %></td>
+                <td>full day</td>
+                <td><%- collection[i].type[j] %></td>
+            </tr>
+
+
+            <%j++; }else{%>
+            <tr>
+                <td><%- collection[i].displayDate[j] %></td>
+                <td><%- collection[i].session[j] %></td>
+                <td><%- collection[i].type[j] %></td>
+            </tr>
+            <% }} %>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="panel-footer" style="overflow: auto;">
+        <div class="col-md-3">
+            <a class="btn btn-default btn-success" btn_approve='<%- collection[i].trxToken %>'><i
+                    class="glyphicon glyphicon-ok-sign"></i> Approve</a>
+            <a class="btn btn-default btn-danger" data-toggle="modal" data-target="#rejectModal"
+               pre_reject='<%- collection[i].trxToken %>'><i class="glyphicon glyphicon-ban-circle"></i> Reject</a>
+        </div>
+        <% if (collection[i].leaveRemark.trim() != '') { %>
+        <div class="col-md-9">
+            Remark: <%- collection[i].leaveRemark %>
+        </div>
+        <% } else if (collection[i].annualLeaveBalance.trim() != '') { %>
+        <div class="col-md-9 row">
+            <div class="col-xs-9">
+                Leave balance after:<br/>
+                (have counted all entries pending for approval, including this one)
+            </div>
+            <div class="col-xs-3">
+                <%- collection[i].annualLeaveBalance %>
+            </div>
+        </div>
+
+
+        <% } %>
+    </div>
+</div>
+<% } %>
+<% } else { %>
+<p>No pending application</p>
+<% } %>
+
+<div class="zoom">
+    <a class="zoom-fab zoom-btn-large hidden" id="calendarFAB" data-toggle="modal" data-target="#calendarModal"><i
+            class="glyphicon glyphicon-calendar fa-2x"></i></a>
+</div>
+
+
+<div id="calendarModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">Team Leave Calendar</h3>
+            </div>
+            <div class="modal-body clearfix">
+
+                <div class="row leaveApplicationView" tab_content>
+                    <div datepicker class="col-md-10 col-md-offset-1"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div id="rejectModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">Reject reason</h3>
+            </div>
+            <div class="modal-body clearfix">
+                <textarea class="form-control" rows="3" id="comment_box"></textarea>
+
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default"  data-dismiss="modal" btn_reject>Reject</a>
+
+            </div>
+        </div>
+
+    </div>
+</div>

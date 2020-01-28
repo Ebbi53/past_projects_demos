@@ -1,0 +1,67 @@
+<h1 class="page-title">Leave history</h1>
+
+
+<% console.log("XS");if (progress != null && progress < 100) {%>
+<div class="bar"></div>
+<% } else { %>
+<table style="margin-bottom: 50px" id="leaveHistory" class="table fadeIn no-wrap display dataTable table-hover">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Date</br>(dd/mm/yyyy)</th>
+            <th>Session and Type</th>
+            <th>Status</th>
+            <th>Action</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%var shownTaken = false;
+            for (var i = 0; i < date.length; i ++) { %>
+        <% if(date[i] === date[i+1]  && approvalAction[i] === approvalAction[i+1] ){ %>
+        <tr>
+            <td></td>
+            <td><%- displayDate[i] %></td>
+            <% if(type[i] === type[i+1]){ %>
+            <td><%- type[i] %>: full day </td>
+            <% }else{%>
+            <td><%- type[i] %>: <%- session[i] %>, <%- type[i+1] %>: <%- session[i+1] %> </td>
+            <% } %>
+            <td><%- approvalAction[i] %></td>
+            <td>
+                <%  if (approvalAction[i] != 'rejected' && new Date(date[i])-new Date()+86400000  >0 ) { %>
+                <div class="btn btn-danger col-xs-12 btn_cancel_leave" option="whole" am_id="<%- id[i] %>"
+                    pm_id="<%- id[i+1] %>"><i class=" glyphicon glyphicon-remove-circle"></i></div>
+                 --> <% } else { %>
+                None
+                <% } %>
+
+            </td>
+            <% i++ %>
+            <% } else { %>
+        <tr>
+            <td></td>
+            <td><%- displayDate[i] %></td>
+            <td><%- type[i] %>: <%- session[i] %></td>
+
+            <td><%- approvalAction[i] %></td>
+            <td>
+                <% if (approvalAction[i] != 'rejected' && new Date(date[i])-new Date()+86400000  >0 ) { %>
+
+                <div href="javascript:void(0)" class="btn btn-danger  col-xs-12 btn_cancel_leave"
+                    leave_id="<%- id[i] %>"><i class=" glyphicon glyphicon-remove-circle"></i> </div>
+                <% } else { %>
+                None
+                <% } %>
+            </td>
+            <% }%>
+            <%  if (new Date(date[i])-new Date()+86400000 < 0) { %>
+            <td>Leave Taken</td>
+            <% } else { %>
+            <td>Leave Booked</td>
+            <% } %>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+<% } %>

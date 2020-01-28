@@ -1,0 +1,127 @@
+<h1 class="page-title">Team leave schedule</h1>
+
+<% if (progress != null && progress < 100) { %>
+<div class="bar"></div>z
+<% } else { %>
+<% if(date.length != 0) { %>
+<% var i = 0;
+	if (new Date(date[i])-new Date()+86400000>0) { %>
+<div>
+	<a class="upcomingLeaves collapseTable" data-toggle="tooltip" data-placement="bottom"
+		data-original-title="Hide this table">
+		<h2 style="margin-bottom: 0;">Upcoming leaves <span style='font-size: 20px; display: none'
+				class="glyphicon glyphicon-chevron-up"></span></h2>
+	</a>
+</div>
+
+<table id="upcomingLeaves" class="no-wrap dataTable fadeIn table-hover">
+	<thead>
+		<tr>
+			<th></th>
+			<th>Day</th>
+			<th>User Name</th>
+			<th>Type and Session</th>
+			<th>Status</th>
+			<th>Month</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% for (var a = 0; a < date.length; a++) {
+                        if (new Date(date[a])-new Date()+86400000<=0) {
+                            i = a;
+                            break;
+                        }
+                    }
+                    for (var b = i - 1; b >= 0; b--) { %>
+		<% if(teamMemberName[b-1] && teamMemberName[b] === teamMemberName[b-1] &&  date[b] === date[b-1] && session[b] !== session[b-1]) { %>
+		<% if (leaveType[b] == leaveType[b-1]) { %>
+		<tr>
+			<td></td>
+			<td> <%- day[b] %></td>
+			<td> <%- teamMemberName[b] %></td>
+			<td> <%- leaveType[b] %> (full day)</td>
+			<td> <%- approvalAction[b] %> </td>
+			<td> <%- month[b] %> </td>
+		</tr>
+		<% } else { %>
+		<tr>
+			<td></td>
+			<td> <%- day[b] %></td>
+			<td> <%- teamMemberName[b] %></td>
+			<td> <%- leaveType[b] %> (<%- session[b] %>), <%- leaveType[b-1] %>
+				(<%- session[b-1] %>)</td>
+			<td> <%- approvalAction[b] %> </td>
+			<td> <%- month[b] %> </td>
+		</tr>
+		<% } %>
+		<% b--;} else { %>
+		<tr>
+			<td></td>
+			<td> <%- day[b] %> </td>
+			<td> <%- teamMemberName[b] %> </td>
+			<td> <%- leaveType[b] %> (<%- session[b] %>) </td>
+			<td> <%- approvalAction[b] %> </td>
+			<td> <%- month[b] %> </td>
+		</tr>
+		<% } %>
+		<% } %>
+	</tbody>
+</table>
+<% } %>
+<a class="previousLeaves collapseTable" data-toggle="tooltip" data-placement="bottom"
+	data-original-title="Hide this table">
+	<h2 style="margin-bottom: 0; margin-top: 50px">Previous leaves <span style='font-size: 20px; display: none'
+			class="glyphicon glyphicon-chevron-up"></span></h2>
+</a>
+<table id="previousLeaves" style="margin-bottom: 50px; " class="no-wrap display dataTable fadeIn table-hover"
+	style="margin-bottom: 50px;">
+	<thead>
+		<tr>
+			<th></th>
+			<th>Day</th>
+			<th>User Name</th>
+			<th>Type and Session</th>
+			<th>Status</th>
+			<th>Month</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% for (var c = i; c < date.length; c++) { %>
+		<% if(teamMemberName[c+1] && teamMemberName[c] === teamMemberName[c+1] &&  date[c] === date[c+1] && session[c] !== session[c+1]) { %>
+		<% if (leaveType[c] == leaveType[c+1]) { %>
+		<tr>
+			<td></td>
+			<td> <%- day[c] %></td>
+			<td> <%- teamMemberName[c] %></td>
+			<td> <%- leaveType[c] %> (full day)</td>
+			<td> <%- approvalAction[c] %> </td>
+			<td> <%- month[c] %> </td>
+		</tr>
+		<% } else { %>
+		<tr>
+			<td></td>
+			<td> <%- day[c] %></td>
+			<td> <%- teamMemberName[c] %></td>
+			<td> <%- leaveType[c] %> (<%- session[c] %>), <%- leaveType[c+1] %>
+				(<%- session[c+1] %>)</td>
+			<td> <%- approvalAction[c] %> </td>
+			<td> <%- month[c] %> </td>
+		</tr>
+		<% } %>
+		<% c++;} else { %>
+		<tr>
+			<td></td>
+			<td> <%- day[c] %> </td>
+			<td> <%- teamMemberName[c] %> </td>
+			<td> <%- leaveType[c] %> (<%- session[c] %>) </td>
+			<td> <%- approvalAction[c] %> </td>
+			<td> <%- month[c] %> </td>
+		</tr>
+		<% } %>
+		<% } %>
+	</tbody>
+</table>
+<% } else { %>
+<h3>No record found!</h3>
+<% } %>
+<% } %>

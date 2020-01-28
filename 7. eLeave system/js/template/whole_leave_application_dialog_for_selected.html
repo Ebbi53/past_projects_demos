@@ -1,0 +1,56 @@
+<!--This is deprecated in 20/9/2017 to fulfill BL change-->
+<!--inherited by whole_leave_application_dialog-->
+<div class="col-xs-12 col-md-3 text-center">
+    <div><%- displayDate %></div>
+    <div><%- type %></div>
+</div>
+<div class="">
+<div class="col-xs-12 col-md-9">
+    <div class=" col-md-6 ">
+        <% if (_applicationActionAM == applicationActionType.DESELECT && _applicationActionPM == applicationActionType.DESELECT) { %>
+        <div class="btn-block btn btn-warning" section="whole" btn_action="<%- applicationActionType.DESELECT %>">
+            Deselect full day
+        </div>
+
+            <% }else if(_applicationActionAM == applicationActionType.APPLIED ||_applicationActionPM == applicationActionType.APPLIED){} else { %>
+        <div class=" btn-block btn btn-primary "section="whole"  btn_action="<%- applicationActionType.SELECT %>">
+            Select full day
+        </div>
+        <% }  %>
+    </div>
+    <div class="visible-xs visible-sm" style="padding:3px;"></div>
+    <div class=" col-md-3 col-xs-6">
+        <% if (_applicationActionAM == applicationActionType.SELECT) { %>
+            <div class=" btn btn-block btn-primary" section="AM" btn_action="<%- _applicationActionAM %>">
+                <%- _applicationActionAM %> AM
+            </div>
+        <% } else if (_applicationActionAM == applicationActionType.DESELECT) { %>
+            <div class=" btn btn-block btn-warning" section="AM" btn_action="<%- _applicationActionAM %>">
+                <%- _applicationActionAM %> AM
+            </div>
+        <% }  else if (_applicationActionAM == applicationActionType.APPLIED) { %>
+            <div class=" text-center">
+                Applied <%- _applicationTypeAM %> leave on am <% if (approvalActionAM) { %>(<%- approvalActionAM %>)<% } %>
+            </div>
+        <% } %>
+    </div>
+
+    <div class=" col-md-3 col-xs-6">
+        <% if (_applicationActionPM == applicationActionType.SELECT) { %>
+        <div class="btn btn-block btn-primary" section="PM" btn_action="<%- _applicationActionPM %>">
+            <%- _applicationActionPM %> PM
+        </div>
+        <% } else if (_applicationActionPM == applicationActionType.DESELECT) { %>
+        <div class="btn btn-block btn-warning" section="PM" btn_action="<%- _applicationActionPM %>">
+            <%- _applicationActionPM %> PM
+        </div>
+        <% }  else if (_applicationActionPM == applicationActionType.APPLIED) { %>
+        <div class="text-center">
+            Applied <%- _applicationTypePM %> leave on pm <% if (approvalActionPM) { %>(<%- approvalActionPM %>)<% } %>
+        </div>
+        <% } %>
+    </div>
+
+
+</div>
+</div>
