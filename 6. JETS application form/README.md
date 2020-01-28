@@ -3,15 +3,17 @@
 **Project Description:** An application form to collect candidates' information. Further technical details is as follows:
 * Used **[RequireJS](https://requirejs.org/)** to give **Modular structure** to the code and handle the **dependencies** properly by **clearly declaring them** in an entry point of the application (in my case main.js).
 * Used **[BackBone.js](https://backbonejs.org/#)** as an **MVC** (Model, View, Collection) framework to further organise the code into different parts with each part responsible for a specific component of the application.
-* Used [Bootstrap](https://getbootstrap.com/) for styling and presentation.
-* Used the JQuery plugin called **[jquery-file-upload](https://blueimp.github.io/jQuery-File-Upload/)** to handle the file uploads on the frontend.
+* For styling and presentation, used [Bootstrap](https://getbootstrap.com/).
+* To handle the file uploads on the frontend, used the JQuery plugin called **[jquery-file-upload](https://blueimp.github.io/jQuery-File-Upload/)**.
 * Used **[JavaScript Cookie](https://github.com/js-cookie/js-cookie)** for session management.
 * Used **[Babel.js](https://babeljs.io/)** to **transpile** the JS code from ES6 to ES5, to include **polyfills** for IE compatibility, and to minify the code.
 * At the **BackEnd**, helped to parse the form data using **[ColdFusion](https://coldfusion.adobe.com/)** and propoed the APIs definitions.
 
 Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and deployed the application in around 4 weeks.
 
-*Please note that due to data privcacy issues, the application is not available and accessible for general public which is why I have attached a short recording for demonstration.*
+*Please note that the application is not currently available live on the internet which is why I have attached a short recording for demonstration.*
+
+**Live:** https://jets.jardinesrecruit.com/form/
 
 ---
 
