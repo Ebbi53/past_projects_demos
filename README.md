@@ -6,17 +6,19 @@ For project description and my contribution in each of them, please visit the po
 
 ## Project #1
 
-**Organization:** Global Engagement Office, City University of Hong Kong (July 2019 – Present)
+Worked on this project myself independently in September 2018.
 
-**Position:** *Developer / Junior Research Assistant*
-
-## *Project #2 - 
+## *Project #2 - #6
 
 **Organization:** Jardine Matheson (July 2018 – August 2019)
 
 **Position:** *Agile Intern Developer / Project Manager*
 
+## Project #7
 
+**Organization:** Global Engagement Office, City University of Hong Kong (July 2019 – Present)
+
+**Position:** *Developer / Junior Research Assistant*
 
 **Please note that I don't have full ownership and copyrights for some projects which were part of my internship so they may not be included in this public repo. Please contact me personally for more details*
 
