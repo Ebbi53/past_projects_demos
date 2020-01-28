@@ -7,7 +7,7 @@
 * To handle the file uploads on the frontend, used the JQuery plugin called **[jquery-file-upload](https://blueimp.github.io/jQuery-File-Upload/)**.
 * Used **[JavaScript Cookie](https://github.com/js-cookie/js-cookie)** for session management.
 * Used **[Babel.js](https://babeljs.io/)** to **transpile** the JS code from ES6 to ES5, to include **polyfills** for IE compatibility, and to minify the code.
-* At the **BackEnd**, helped to parse the form data using **[ColdFusion](https://coldfusion.adobe.com/)** and propoed the APIs definitions.
+* At the **BackEnd**, helped to parse the form data using **[ColdFusion](https://coldfusion.adobe.com/)** and proposed the RESTful APIs definitions.
 
 Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and deployed each application in around 4 weeks.
 
