@@ -12,7 +12,7 @@ Worked on this project myself independently in September 2018.
 
 **Organization:** Jardine Matheson (July 2018 – August 2019)
 
-**Position:** *Agile Intern Developer / Project Manager*
+**Position:** *Software Developer / Project Manager*
 
 ## Project #7
 
