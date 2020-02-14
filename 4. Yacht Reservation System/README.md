@@ -5,7 +5,7 @@
 * Configured the already provided standard frontend from [the platform](https://www.planyo.com/) using basic **HTML, CSS, and JavaScript scripts** to meet other Company specific requirements.
 * Used **[Babel.js](https://babeljs.io/)** to **transpile** the JS code from ES6 to ES5 and to include **polyfills** for IE compatibility.
 * Used  a **PHP script** to extend the pricing logic provided by [the platform](https://www.planyo.com/) and hosted it on **[AWS EC2](https://aws.amazon.com/ec2/)**.
-* Used **LAMP Stack** (Linux, Apache, MySQL, and PHP) for server configuration and **[AWS SES (Simple Email Service)](https://aws.amazon.com/ses/)** for setting up SMTP.
+* Used **LAMP Stack** (Linux, Apache, MySQL, and PHP) for server configuration and **[AWS SES (Simple Email Service)](https://aws.amazon.com/ses/)** for setting up SMTP. Enabled **SSL/TLS** using **[Let’s Encrypt Certificate Authority](https://letsencrypt.org/)**.
 
 *Note: Due to platform restrictions and copyright issues (no longer being part of the company), I don't have access to HTML, CSS, and JavaScript scripts for demonstration. I can only share the PHP script I wrote.*
 
