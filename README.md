@@ -2,7 +2,7 @@
 
 I have tried to include almost all the projects I have worked on whether as a part of my internship or independently.
 
-For project description and my contribution in each of them, please visit the porjects' folder seperately (and open the README files seperately **if using mobile phones**).
+For project description and my contribution in each of them, please visit **EACH project folder SEPERATELY** (and open the README files seperately **if using mobile phones**).
 
 ## Project #1
 
