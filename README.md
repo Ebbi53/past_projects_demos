@@ -21,6 +21,12 @@ Worked on this project myself independently in September 2018.
 
 **Position:** *Developer / Junior Research Assistant*
 
+## Project #8
+
+**Organization:** HSBC Prosperity Hall’s IT Team
+
+**Position:** *Developer*
+
 **Please note that I don't have full ownership and copyrights for some projects which were part of my internship so they may not be included in this public repo. Please contact me personally for more details*
 
 ### Thank You!
