@@ -11,7 +11,7 @@
 
 Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and deployed each application in around 4 weeks.
 
-*Please note that the application is not currently available live on the internet which is why I have attached a short recording (GIF) for demonstration. If you want to have a proper look at the video, please download the **JF Scholarship.mov** or **JETS.mov** video file from above.*
+*Please note that the application is not currently available live on the internet which is why I have attached a short recording (GIF) for demonstration. If you want to have a proper look at the video, please either watch it **[here]()** or **[here]()** or download the **JF Scholarship.mov** or **JETS.mov** video file from above.*
 
 **Live:**
 * https://jets.jardinesrecruit.com/form/
@@ -25,9 +25,13 @@ Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-w
 
 ![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/2.%20Two%20Application%20Forms%20(JETS%20%26%20JF%20Scholarship)/JF%20Scholarship%20application%20form/Screen%20Recording%202020-01-29%20at%202.31.37%20AM.gif)
 
+*YouTube: *
+
 **2. JETS**
 
 ![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/2.%20Two%20Application%20Forms%20(JETS%20%26%20JF%20Scholarship)/JETS%20application%20form/Screen%20Recording%202020-01-28%20at%205.42.41%20PM.gif)
+
+*YouTube: *
 
 ---
 
