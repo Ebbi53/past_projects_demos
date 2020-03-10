@@ -4,7 +4,7 @@
 
 Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and developed this website in about 2 weeks along with 2 other developers.
 
-*Please note that I have attached a recording (GIF) for demonstration. If you want to have a proper look at the video, please download the **.mov** video file from above*
+*Please note that I have attached a recording (GIF) for demonstration. If you want to have a proper look at the video, please either watch it **[here]()** or download the **.mov** video file from above*
 
 ---
 
