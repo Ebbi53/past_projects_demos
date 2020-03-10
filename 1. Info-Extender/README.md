@@ -17,10 +17,9 @@
 
 **Demo:**
 
-*GIF:*
 ![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/1.%20Info-Extender/Screen%20Recording%202020-01-28%20at%201.11.51%20AM.gif)
 
-*YouTube:* https://youtu.be/J3Zl_vkWg_o
+YouTube: https://youtu.be/J3Zl_vkWg_o
 
 ---
 
