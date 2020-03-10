@@ -9,7 +9,7 @@
 * Used **[AmCharts](https://www.amcharts.com/), [d3-funnel](https://jakezatecky.github.io/d3-funnel/),** and **[CanvasJS](https://canvasjs.com/)** for different visualizations. And **[DC.js](https://dc-js.github.io/dc.js/)** for cross-filtering.
 * Initially deployed the application on **[Heroku](https://www.heroku.com/)** and then permanently on **[AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)**.
 
-*Please note that due to data privcacy issues, the application is not available and accessible for general public which is why I have attached a short recording (GIF) for demonstration. If you want to have a proper look at the video, please download the **.mp4** video file from above*
+*Please note that due to data privcacy issues, the application is not available and accessible for general public which is why I have attached a short recording (GIF) for demonstration. If you want to have a proper look at the video, please either watch it **[here]()** or download the **.mp4** video file from above*
 
 ---
 
