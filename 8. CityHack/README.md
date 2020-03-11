@@ -4,7 +4,7 @@
 
 Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and developed this website in about 2 weeks along with 2 other developers.
 
-*Please note that I have attached a recording (GIF) for demonstration. If you want to have a proper look at the video, please either watch it **[here]()** or download the **.mov** video file from above*
+*Please note that I have attached a recording (GIF) for demonstration. If you want to have a proper look at the video, please either watch it **[here](https://youtu.be/5l9whGfTfF4)** or download the **.mov** video file from above*
 
 ---
 
@@ -12,4 +12,4 @@ Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-w
 
 ![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/8.%20CityHack/Screen%20Recording%202020-02-15%20at%203.29.50%20AM.gif)
 
-*YouTube: *
+*YouTube: https://youtu.be/5l9whGfTfF4*
