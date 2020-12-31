@@ -5,6 +5,12 @@ I have tried to include almost all the projects I have worked on whether as a pa
 
 For project description and my contribution in each of them, please visit **EACH project folder SEPERATELY** (and open the README files seperately **if using mobile phones**).
 
+## Project #2
+
+Smart Seat Management system - https://youtu.be/BEROIVwbmGc
+
+Worked on this project as my Final Year Project in first half of 2020. Developed a web application using Computer Vision to predict seat occupancy statuses and provide navigation.
+
 ## Project #3
 
 Info-Extender - https://youtu.be/J3Zl_vkWg_o
