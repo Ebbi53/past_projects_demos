@@ -9,13 +9,15 @@
 
 *Note: Due to platform restrictions and copyright issues (no longer being part of the company), I don't have access to HTML, CSS, and JavaScript scripts for demonstration. I can only share the PHP script I wrote.*
 
-*Also, the platform is for internal employees only and not for general public which is why I have attached a short recording  (GIF) for demonstration. If you want to have a proper look at the video, please download the **.mov** video file from above*
+*Also, the platform is for internal employees only and not for general public which is why I have attached a short recording  (GIF) for demonstration. If you want to have a proper look at the video, please either watch it **[here](https://youtu.be/u4cJlWQ56eE)** or download the **.mov** video file from above*
 
 ---
 
 **Demo:**
 
 ![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/4.%20Yacht%20Reservation%20System/Screen%20Recording%202020-01-24%20at%208.25.00%20PM.gif)
+
+*YouTube: https://youtu.be/u4cJlWQ56eE*
 
 ---
 
