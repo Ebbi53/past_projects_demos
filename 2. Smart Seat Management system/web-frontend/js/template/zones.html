@@ -1,0 +1,75 @@
+<div class="w-100" id="reload-icon">
+  <i class="fas fa-sync-alt"></i>
+</div>
+<% for (let zone in data) { %>
+<div class="col-lg-6 r-100">
+  <div>
+    <h1 class="display-5">Zone <%- zone %></h1>
+    <hr class="my-3">
+    <ul>
+      <li>Available: <span id="available"><%- data[zone]["Available"] %></span> <i class="fas fa-check-circle"></i></li>
+      <li>Reserved: <span id="reserved"><%- data[zone]["Reserved"] %></span><i class="fas fa-exclamation-circle"></i>
+      </li>
+      <li>Occupied: <%- data[zone]["Occupied"] %> <i class="fas fa-times-circle"></i></li>
+    </ul>
+    <p>Total: <%- data[zone]["Available"] + data[zone]["Reserved"] + data[zone]["Occupied"] %></p>
+    <button class="btn btn-warning btn" data-toggle="modal" data-target="#reservationCounter<%-zone%>" href="#"
+      style="margin-bottom: 10px;" type="button">Check Reservation counter(s)</button>
+    <button class="btn btn-success btn" data-toggle="modal" data-target="#directions<%-zone%>" type="button">Get
+      directions to
+      available seats</button>
+  </div>
+</div>
+
+
+<div class="modal fade" id="reservationCounter<%-zone%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reservation Counter(s)</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <% if(data[zone]['Reservation counters'].length) { %>
+        <ul>
+          <% for (let counter of data[zone]['Reservation counters']) { %>
+          <li>Seat <%-counter['seat_id']%>: <span id="counter<%-zone%><%-counter['seat_id']%>"></span> left</li>
+          <% $(document).ready(function () {
+            $(`#counter${zone+counter['seat_id']}`).countdowntimer({ minutes: Math.floor((counter['reservation_end_time'] - Date.now()) / 60000), seconds: (((counter['reservation_end_time'] - Date.now()) % 60000) / 1000).toFixed(0), size: "lg", expiryUrl: window.location.href }); 
+            }) %>
+          <% } %>
+        </ul>
+        <% } else { %>
+        No reserved seats
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="directions<%-zone%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Directions to Zone</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ol>
+          <% for (let direction of data[zone]['Directions']) { %>
+          <li>
+            <%- direction %>
+          </li>
+          <% } %>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>

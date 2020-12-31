@@ -1,0 +1,27 @@
+{
+  "name": "smart-seat-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ebbi53/smart_seat_managemet_system.git"
+  },
+  "author": "Ibrahim SHABBIR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ebbi53/smart_seat_managemet_system/issues"
+  },
+  "homepage": "https://github.com/Ebbi53/smart_seat_managemet_system#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.6",
+    "node-pty": "^0.9.0",
+    "password-hash": "^1.2.2",
+    "request": "^2.88.2",
+    "socket.io": "^2.3.0"
+  }
+}

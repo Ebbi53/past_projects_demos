@@ -1,0 +1,8 @@
+node_modules
+__pycache__
+*.weights
+*.zip
+*.avi
+# *.png
+*.mp4
+*.mov

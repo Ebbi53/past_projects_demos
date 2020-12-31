@@ -1,0 +1,67 @@
+<% if (progress != null && progress < 100) { %>
+<% $('.bar').show() %>
+<% } else { %>
+<% $('.bar').hide() %>
+
+<ul class="navbar-nav flex-column w-100">
+    <li class="nav-item">
+        <a class="nav-link" href="#zones">
+            <div class="row w-100 no-margin">
+                <div class="col-10 no-padding">
+                    Zones
+                </div>
+                <div class="col-2 my-auto no-padding">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#available">
+            <div class="row w-100 no-margin">
+                <div class="col-10 no-padding">
+                    Available Seats
+                </div>
+                <div class="col-2 my-auto no-padding">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#reserved">
+            <div class="row w-100 no-margin">
+                <div class="col-10 no-padding">
+                    Reserved Seats
+                </div>
+                <div class="col-2 my-auto no-padding">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <label for="">ID: </label>
+            <input type="text" name="">
+            <br>
+            <label for="">Password:</label>
+            <input type="password" name="">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="#admin" role="button" class="btn btn-primary">Submit</a>
+          </div>
+      </div>
+    </div>
+  </div>
+<% } %>

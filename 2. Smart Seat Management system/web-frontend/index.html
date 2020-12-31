@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Smart Seat Management System</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="lib/bootstrap-4.3.1/dist/css/bootstrap.css">
+	<link href="lib/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet" type="text/css">
+
+	<link href="css/main.css" rel="stylesheet" type="text/css" media="screen, print">
+
+</head>
+
+<body>
+	<div id="header" class="no-print">
+	</div>
+
+	<div class="row w-100 no-margin">
+		<div class="col-12 ml-auto no-print" id="navbar_button">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fas fa-bars h3 my-auto"></i>
+			</button>
+		</div>
+
+		<div class="col-12">
+			<div class="bar"></div>
+		</div>
+
+		<div class="col-lg-3 col-10 mr-auto ml-auto no-print" id="navdiv">
+
+			<nav class="navbar navbar-expand-lg navbar-light w-100">
+
+			</nav>
+		</div>
+		
+		<div class="col-lg-9" id="body">
+			<div class="circle-loader hidden">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="no-print">
+	</footer>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script data-main="js/main.js" src="lib/require-2.3.6.js"></script>
+
+</html>
