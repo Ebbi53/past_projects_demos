@@ -5,13 +5,13 @@ I have tried to include almost all the projects I have worked on whether as a pa
 
 For project description and my contribution in each of them, please visit **EACH project folder SEPERATELY** (and open the README files seperately **if using mobile phones**).
 
-## Project #1
+## Project #3
 
 Info-Extender - https://youtu.be/J3Zl_vkWg_o
 
 Worked on this project myself independently in September 2018.
 
-## *Project #2 - #6
+## *Project #4 - #8
 
 **Organization:** Jardine Matheson (July 2018 – August 2019)
 
@@ -25,7 +25,7 @@ JETS Visualizer | https://youtu.be/Il7SNmvnlxI
 Yacht Reservation System | https://youtu.be/u4cJlWQ56eE
 eLeave system | https://youtu.be/FmH1IODMrqw
 
-## Project #7
+## Project #9
 
 Stats Visualizer - https://youtu.be/ZrbmliSQjhs
 
@@ -33,7 +33,7 @@ Stats Visualizer - https://youtu.be/ZrbmliSQjhs
 
 **Position:** *Developer / Junior Research Assistant*
 
-## Project #8
+## Project #10
 
 CityHack - https://youtu.be/5l9whGfTfF4
 
