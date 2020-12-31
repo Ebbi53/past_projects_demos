@@ -25,4 +25,4 @@
 
 **Contributions/Ownership:** 100% mine
 
-![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/1.%20Info-Extender/Screenshot%202020-01-28%20at%204.49.23%20PM.png)
+![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/%203.%20Info-Extender/Screenshot%202020-01-28%20at%204.49.23%20PM.png)
