@@ -23,13 +23,13 @@ Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-w
 
 **1. JF Scholarship**
 
-![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/2.%20Two%20Application%20Forms%20(JETS%20%26%20JF%20Scholarship)/JF%20Scholarship%20application%20form/Screen%20Recording%202020-01-29%20at%202.31.37%20AM.gif)
+![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%204.%20Two%20Application%20Forms%20(JETS%20%26%20JF%20Scholarship)/JF%20Scholarship%20application%20form/Screen%20Recording%202020-01-29%20at%202.31.37%20AM.gif)
 
 *YouTube: https://youtu.be/AcIqyeYYEZ0*
 
 **2. JETS**
 
-![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/2.%20Two%20Application%20Forms%20(JETS%20%26%20JF%20Scholarship)/JETS%20application%20form/Screen%20Recording%202020-01-28%20at%205.42.41%20PM.gif)
+![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%204.%20Two%20Application%20Forms%20(JETS%20%26%20JF%20Scholarship)/JETS%20application%20form/Screen%20Recording%202020-01-28%20at%205.42.41%20PM.gif)
 
 *YouTube: https://youtu.be/EltwS0xtMBY*
 
@@ -39,8 +39,8 @@ Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-w
 
 **1. JF Scholarship** (70% mine)
 
-![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/2.%20Two%20Application%20Forms%20(JETS%20%26%20JF%20Scholarship)/JF%20Scholarship%20application%20form/Screenshot%202020-01-29%20at%202.50.41%20AM.png)
+![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/%204.%20Two%20Application%20Forms%20(JETS%20%26%20JF%20Scholarship)/JF%20Scholarship%20application%20form/Screenshot%202020-01-29%20at%202.50.41%20AM.png)
 
 **2. JETS** (80% mine)
 
-![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/2.%20Two%20Application%20Forms%20(JETS%20%26%20JF%20Scholarship)/JETS%20application%20form/Screenshot%202020-01-28%20at%206.05.35%20PM.png)
+![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/%204.%20Two%20Application%20Forms%20(JETS%20%26%20JF%20Scholarship)/JETS%20application%20form/Screenshot%202020-01-28%20at%206.05.35%20PM.png)

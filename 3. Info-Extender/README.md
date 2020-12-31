@@ -17,7 +17,7 @@
 
 **Demo:**
 
-![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/1.%20Info-Extender/Screen%20Recording%202020-01-28%20at%201.11.51%20AM.gif)
+![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%203.%20Info-Extender/Screen%20Recording%202020-01-28%20at%201.11.51%20AM.gif)
 
 *YouTube: https://youtu.be/J3Zl_vkWg_o*
 
@@ -25,4 +25,4 @@
 
 **Contributions/Ownership:** 100% mine
 
-![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/1.%20Info-Extender/Screenshot%202020-01-28%20at%204.49.23%20PM.png)
+![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/%203.%20Info-Extender/Screenshot%202020-01-28%20at%204.49.23%20PM.png)
