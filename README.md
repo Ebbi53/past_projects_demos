@@ -29,7 +29,7 @@ eLeave system | https://youtu.be/FmH1IODMrqw
 
 Stats Visualizer - https://youtu.be/ZrbmliSQjhs
 
-**Organization:** Global Engagement Office, City University of Hong Kong (July 2019 – Present)
+**Organization:** Global Engagement Office, City University of Hong Kong (July 2019 – June 2020)
 
 **Position:** *Developer / Junior Research Assistant*
 
