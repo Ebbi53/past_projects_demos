@@ -13,7 +13,7 @@ Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-w
 
 **Demos:**
 
-![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/7.%20Stats%20Visualizer/Screen%20Recording%202020-01-24%20at%205.38.40%20PM.gif)
+![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/7.%20Stats%20Visualizer/Screen%20Recording%202020-03-11%20at%205.51.48%20AM-Updated.gif)
 
 *YouTube: https://youtu.be/ZrbmliSQjhs*
 
