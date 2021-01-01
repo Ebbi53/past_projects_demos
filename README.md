@@ -7,7 +7,7 @@ For a detailed project description and my contribution in each of them, please v
 
 ## Project #1
 
-Nice Care Smart System - https://youtu.be/ZrbmliSQjhs
+Nice Care Smart System - https://youtu.be/63Z5-OhUqBo
 
 **Organization:** Wonderkin (July 2020 – Present)
 
