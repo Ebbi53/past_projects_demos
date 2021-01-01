@@ -9,15 +9,13 @@
 * Used **[AmCharts](https://www.amcharts.com/), [d3-funnel](https://jakezatecky.github.io/d3-funnel/),** and **[CanvasJS](https://canvasjs.com/)** for different visualizations. And **[DC.js](https://dc-js.github.io/dc.js/)** for cross-filtering.
 * Initially deployed the application on **[Heroku](https://www.heroku.com/)** and then permanently on **[AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)**.
 
-*Please note that due to data privcacy issues, the application is not available and accessible for general public which is why I have attached a short recording (GIF) for demonstration. If you want to have a proper look at the video, please either watch it **[here](https://youtu.be/Il7SNmvnlxI)** or download the **.mp4** video file from above*
+*Please note that the platform is for internal employees only and not for general public which is why I have attached a short recording (GIF) for demonstration. If you want to have a proper look at the video, please watch it **[here](https://youtu.be/Il7SNmvnlxI)**.*
 
 ---
 
-**Demo:**
+**Demo:** *https://youtu.be/Il7SNmvnlxI*
 
 ![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%205.%20JETS%20Visualizer/Screen%20Recording%202019-01-23%20at%2017.00.42.gif)
-
-*YouTube: https://youtu.be/Il7SNmvnlxI*
 
 ---
 
