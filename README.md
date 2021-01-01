@@ -17,7 +17,7 @@ Nice Care Smart System - https://youtu.be/63Z5-OhUqBo
 
 Smart Seat Management system - https://youtu.be/BEROIVwbmGc
 
-Worked on this project as my Final Year Project in first half of 2020. Developed a web application using Computer Vision to predict seat occupancy statuses and provide navigation.
+Worked on this project as my Final Year Project in first half of 2020. Developed a web application using __Computer Vision__ to predict seat occupancy statuses and provide navigation.
 
 ## Project #3
 
