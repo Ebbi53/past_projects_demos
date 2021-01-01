@@ -11,15 +11,11 @@
 * The **Backend** of the application i.e. the **web-server** and **server-side** scripts are setup using **[NodeJS](https://nodejs.org/en/)** along with the **[ExpressJS](https://expressjs.com/)**.
 * Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and developed this first workable prototype in about 2 weeks.
 
-*Please note that I have attached a recording (GIF) for demonstration. If you want to have a proper look at the video, please either watch it **[here](https://youtu.be/J3Zl_vkWg_o)** or download the **.mp4** video file from above.*
-
 ---
 
-**Demo:**
+**Demo:** *https://youtu.be/J3Zl_vkWg_o*
 
 ![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%203.%20Info-Extender/Screen%20Recording%202020-01-28%20at%201.11.51%20AM.gif)
-
-*YouTube: https://youtu.be/J3Zl_vkWg_o*
 
 ---
 
