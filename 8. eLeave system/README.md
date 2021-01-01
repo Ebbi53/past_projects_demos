@@ -7,15 +7,13 @@
 * Worked with an **XML API** implemented using **[FileMaker](https://www.filemaker.com/)** database.
 * Migrated the dependencies (libraries, frameworks) to the newer and latest versions.
 
-*Please note that this platform is for internal employees only and not for general public which is why I have attached a recording (GIF) for demonstration. If you want to have a proper look at the video, please either watch it **[here](https://youtu.be/FmH1IODMrqw)** or download the **.mov** video file from above*
+*Please note that this platform is for internal employees only and not for general public which is why I have attached a recording (GIF) for demonstration. If you want to have a proper look at the video, please watch it **[here](https://youtu.be/FmH1IODMrqw)**.*
 
 ---
 
-**Demo:**
+**Demo:** *https://youtu.be/FmH1IODMrqw*
 
 ![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%208.%20eLeave%20system/Screen%20Recording%202020-01-29%20at%204.18.38%20AM.gif)
-
-*YouTube: https://youtu.be/FmH1IODMrqw*
 
 ---
 
