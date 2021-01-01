@@ -7,17 +7,17 @@ For a detailed project description and my contribution in each of them, please v
 
 ## Project #1
 
+Smart Seat Management system - https://youtu.be/BEROIVwbmGc
+
+Worked on this project as my Final Year Project in first half of 2020. Developed a web application using __Computer Vision__ to predict seat occupancy statuses and provide navigation.
+
+## Project #2
+
 Nice Care Smart System - https://youtu.be/63Z5-OhUqBo
 
 **Organization:** Wonderkin (July 2020 – Present)
 
 **Position:** *Backend / Machine Learning engineer*
-
-## Project #2
-
-Smart Seat Management system - https://youtu.be/BEROIVwbmGc
-
-Worked on this project as my Final Year Project in first half of 2020. Developed a web application using __Computer Vision__ to predict seat occupancy statuses and provide navigation.
 
 ## Project #3
 
