@@ -1,1 +1,0 @@
-# Smart Seat Management System
