@@ -7,7 +7,7 @@
 * Used  a **PHP script** to extend the pricing logic provided by [the platform](https://www.planyo.com/) and hosted it on **[AWS EC2](https://aws.amazon.com/ec2/)**.
 * Used **LAMP Stack** (Linux, Apache, MySQL, and PHP) for server configuration and **[AWS SES (Simple Email Service)](https://aws.amazon.com/ses/)** for setting up SMTP. Enabled **SSL/TLS** using **[Let’s Encrypt Certificate Authority](https://letsencrypt.org/)**.
 
-*Note: Due to platform restrictions and copyright issues (no longer being part of the company), I don't have access to HTML, CSS, and JavaScript scripts for demonstration. I can only share the PHP script I wrote.*
+*Note: Due to platform restrictions and copyright issues (no longer being part of the company), I cannot publicly publish the HTML, CSS, and JavaScript scripts for demonstration. I can only share the PHP script I wrote.*
 
 *Also, the platform is for internal employees only and not for general public which is why I have attached a short recording  (GIF) for demonstration. If you want to have a proper look at the video, please either watch it **[here](https://youtu.be/u4cJlWQ56eE)** or download the **.mov** video file from above*
 
