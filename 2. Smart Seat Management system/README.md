@@ -31,19 +31,19 @@ Graph 4: ![Testing 4](https://github.com/Ebbi53/past_projects_demos/blob/master/
 
 ---
 
-### Demo:
-
-*__YouTube__: https://youtu.be/BEROIVwbmGc*
+#### Demo: *https://youtu.be/BEROIVwbmGc*
 
 ![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%202.%20Smart%20Seat%20Management%20system/demo.gif)
 
 
+
+
 **ML outputs:**
+
+*ML output 1: https://youtu.be/TuEk-_IzVgk*
+
+*ML output 2: https://youtu.be/PXjMJZObjIg*
 
 ![ML output 1](https://github.com/Ebbi53/past_projects_demos/blob/master/%202.%20Smart%20Seat%20Management%20system/ML%20output1.gif)
 
-*YouTube: https://youtu.be/TuEk-_IzVgk*
-
 ![ML output 2](https://github.com/Ebbi53/past_projects_demos/blob/master/%202.%20Smart%20Seat%20Management%20system/ML%20output2.gif)
-
-*YouTube: https://youtu.be/PXjMJZObjIg*
