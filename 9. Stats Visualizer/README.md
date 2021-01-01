@@ -9,13 +9,11 @@
 
 Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and deployed the application in around 2 weeks.
 
-*Please note that due to data privcacy issues, the application is not available and accessible for general public which is why I have attached a short recording (GIF) for demonstration. If you want to have a proper look at the video, please either watch it **[here](https://youtu.be/ZrbmliSQjhs)** or download the **.mov** video file from above*
+*Please note that due to data privcacy issues, the application is not available and accessible for general public which is why I have attached a short recording (GIF) for demonstration. If you want to have a proper look at the video, please watch it **[here](https://youtu.be/ZrbmliSQjhs)**.*
 
-**Demos:**
+**Demos:** *https://youtu.be/ZrbmliSQjhs*
 
 ![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%209.%20Stats%20Visualizer/Screen%20Recording%202020-03-11%20at%205.51.48%20AM-Updated.gif)
-
-*YouTube: https://youtu.be/ZrbmliSQjhs*
 
 ---
 
