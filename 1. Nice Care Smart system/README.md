@@ -18,12 +18,10 @@ The techinical details are as follows:
     * **[PHP](https://www.php.net/)** via [php-fpm](https://www.php.net/manual/en/install.fpm.php) with PHP MVC framework, **[CodeIgniter](https://codeigniter.com/)**, to dynamically generate webpages based on the routes.
     * Using [Swoole framework](https://www.swoole.co.uk/) to establish a **TCP** communication channel between the IoT sensor and the WebServer and also a __WebSocket__ communication channel between the server and the frontend UI.
 
-_Please note that due to copyright issues, I cannot publicly publish the code. Please contact me if you want to know more. Also, please note that I have attached a recording (GIF) for demonstration. If you want to have a proper look at the video, please watch it **[here](https://youtu.be/63Z5-OhUqBo)**._
+_Please note that due to copyright issues, I cannot publicly publish the code. Please contact me if you want to know more._
 
 ---
 
-**Demo:**
+**Demo:** *https://youtu.be/63Z5-OhUqBo*
 
 ![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%201.%20Nice%20Care%20Smart%20system/demo.gif)
-
-*YouTube: https://youtu.be/63Z5-OhUqBo*
