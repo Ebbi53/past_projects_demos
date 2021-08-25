@@ -9,7 +9,7 @@ Nice Care Smart system is a B2B product comprising of a web portal and a mobile 
 
 Sysetm Design:
 
-![Sysetm Design](https://github.com/Ebbi53/past_projects_demos/blob/master/%201.%20Nice%20Care%20Smart%20system/system%20design.jpg)
+![Sysetm Design](https://github.com/Ebbi53/past_projects_demos/blob/master/%202.%20Nice%20Care%20Smart%20system/system%20design.jpg)
 
 The techinical details are as follows:
 * Using [LEMP Stack](https://lempstack.com/) (Linux, Nginx, MySQL, PHP) hosted on **[AWS EC2](https://aws.amazon.com/ec2/)**
@@ -24,4 +24,4 @@ _Please note that due to copyright issues, I cannot publicly publish the code. P
 
 **Demo:** *https://youtu.be/63Z5-OhUqBo*
 
-![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%201.%20Nice%20Care%20Smart%20system/demo.gif)
+![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%202.%20Nice%20Care%20Smart%20system/demo.gif)
