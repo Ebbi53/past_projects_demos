@@ -5,13 +5,13 @@ I have tried to include almost all the projects I have worked on whether as a pa
 
 For a detailed project description and my contribution in each of them, please visit **EACH project folder SEPERATELY** (and open the README files seperately **if using mobile phones**).
 
-## Project #1
+## Project #2
 
 Smart Seat Management system - https://youtu.be/BEROIVwbmGc
 
 Worked on this project as my Final Year Project in first half of 2020. Developed a web application using __Computer Vision__ to predict seat occupancy statuses and provide navigation.
 
-## Project #2
+## Project #3
 
 Nice Care Smart System - https://youtu.be/63Z5-OhUqBo
 
@@ -19,13 +19,13 @@ Nice Care Smart System - https://youtu.be/63Z5-OhUqBo
 
 **Position:** *Backend / Machine Learning engineer*
 
-## Project #3
+## Project #4
 
 Info-Extender - https://youtu.be/J3Zl_vkWg_o
 
 Worked on this project myself independently in September 2018.
 
-## *Project #4 - #8
+## *Project #5 - #9
 
 **Organization:** Jardine Matheson (July 2018 – August 2019)
 
@@ -39,7 +39,7 @@ JETS Visualizer | https://youtu.be/Il7SNmvnlxI
 Yacht Reservation System | https://youtu.be/u4cJlWQ56eE
 eLeave system | https://youtu.be/FmH1IODMrqw
 
-## Project #9
+## Project #10
 
 Stats Visualizer - https://youtu.be/ZrbmliSQjhs
 
@@ -47,7 +47,7 @@ Stats Visualizer - https://youtu.be/ZrbmliSQjhs
 
 **Position:** *Developer / Junior Research Assistant*
 
-## Project #10
+## Project #11
 
 CityHack - https://youtu.be/5l9whGfTfF4
 
