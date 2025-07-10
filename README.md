@@ -1,9 +1,21 @@
 # Welcome!
 *(Recommended to view the Desktop version)*
 
-I have tried to include almost all the projects I have worked on whether as a part of my internship or independently.
+I have tried to include most of the projects I have worked on during my full-time/part-time jobs, internships, or as side projects.
 
 For a detailed project description and my contribution in each of them, please visit **EACH project folder SEPERATELY** (and open the README files seperately **if using mobile phones**).
+
+## Project #1
+
+Electrical Impedence Tomography (EIT) Diagnostic Imaging -
+
+**Organization:** Gense Technologies Ltd (July 2021 – Present)
+
+**Positions:** 
+
+*Senior Software engineer (May 2022 – Present)*
+
+*Software engineer (July 2021 – April 2022)*
 
 ## Project #2
 
@@ -13,11 +25,15 @@ Worked on this project as my Final Year Project in first half of 2020. Developed
 
 ## Project #3
 
-Nice Care Smart System - https://youtu.be/63Z5-OhUqBo
+Smart Incontinence System (Nice Care Smart) - https://youtu.be/63Z5-OhUqBo
 
-**Organization:** Wonderkin (July 2020 – Present)
+**Organization:** Wonderkin (July 2020 – July 2021)
 
-**Position:** *Backend / Machine Learning engineer*
+**Positions:** 
+
+*Technical Lead (February 2021 – July 2021)*
+
+*Backend / Machine Learning engineer (July 2020 – January 2021)*
 
 ## Project #4
 
