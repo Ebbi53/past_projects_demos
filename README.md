@@ -7,7 +7,7 @@ For a detailed project description and my contribution in each of them, please v
 
 ## Project #1
 
-Electrical Impedence Tomography (EIT) Diagnostic Imaging -
+Electrical Impedence Tomography (EIT) Diagnostic Imaging - https://youtu.be/aOn8_NUtjGs
 
 **Organization:** Gense Technologies Ltd (July 2021 – Present)
 
