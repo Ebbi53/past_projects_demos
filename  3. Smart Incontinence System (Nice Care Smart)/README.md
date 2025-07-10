@@ -1,4 +1,4 @@
-# Nice Care Smart system
+# Smart Incontinence System (Nice Care Smart)
 
 **Project Description:** 
 
