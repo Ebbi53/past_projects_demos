@@ -11,9 +11,9 @@ Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-w
 
 *Please note that due to data privcacy issues, the application is not available and accessible for general public which is why I have attached a short recording (GIF) for demonstration. If you want to have a proper look at the video, please watch it **[here](https://youtu.be/ZrbmliSQjhs)**.*
 
-**Demos:** *https://youtu.be/ZrbmliSQjhs*
+**Demo:** *https://youtu.be/ZrbmliSQjhs*
 
-![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%209.%20Stats%20Visualizer/Screen%20Recording%202020-03-11%20at%205.51.48%20AM-Updated.gif)
+![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/10.%20Stats%20Visualizer/Screen%20Recording%202020-03-11%20at%205.51.48%20AM-Updated.gif)
 
 ---
 
