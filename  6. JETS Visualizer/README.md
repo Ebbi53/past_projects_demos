@@ -15,10 +15,10 @@
 
 **Demo:** *https://youtu.be/Il7SNmvnlxI*
 
-![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%205.%20JETS%20Visualizer/Screen%20Recording%202019-01-23%20at%2017.00.42.gif)
+![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%206.%20JETS%20Visualizer/Screen%20Recording%202019-01-23%20at%2017.00.42.gif)
 
 ---
 
 **Contributions/Ownership:** 63% mine
 
-![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/%205.%20JETS%20Visualizer/Screenshot%202020-01-27%20at%205.39.00%20PM.png)
+![Screen Capture](https://github.com/Ebbi53/past_projects_demos/blob/master/%206.%20JETS%20Visualizer/Screenshot%202020-01-27%20at%205.39.00%20PM.png)
