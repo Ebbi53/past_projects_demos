@@ -36,5 +36,3 @@ _Please note that due to copyright issues and the complexity of the project invo
 ---
 
 **Demo:** *https://youtu.be/aOn8_NUtjGs*
-
-![Screen Recording](https://github.com/Ebbi53/past_projects_demos/blob/master/%201.%20Electrical%20Impedence%20Tomography%20(EIT)%20Diagnostic%20Imaging/demo.gif)
