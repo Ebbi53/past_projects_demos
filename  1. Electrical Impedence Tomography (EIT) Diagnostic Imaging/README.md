@@ -35,4 +35,8 @@ _Please note that due to copyright issues and the complexity of the project invo
 
 ---
 
-**Demo:** *https://youtu.be/aOn8_NUtjGs*
+**Detailed App Demo:** *https://youtu.be/aOn8_NUtjGs (~15 minutes)*
+
+**Product overview:** *https://youtu.be/mIgncHwx5og (~2 minutes)*
+
+**Company Info:** *https://www.gensetechnologies.com/*
